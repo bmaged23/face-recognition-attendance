@@ -21,8 +21,8 @@ def main():
     ], check=True)
     subprocess.run([
         'ffmpeg', '-y', '-hide_banner', '-loglevel', 'error', '-i', str(video),
-        '-filter_complex', 'fps=8,scale=600:-1:flags=lanczos,split[a][b];'
-        '[a]palettegen=stats_mode=diff[p];[b][p]paletteuse=dither=bayer:bayer_scale=3',
+        '-filter_complex', 'fps=4,scale=600:-1:flags=lanczos,split[a][b];'
+        '[a]palettegen=max_colors=48:stats_mode=diff[p];[b][p]paletteuse=dither=none:diff_mode=rectangle',
         '-loop', '0', str(media / 'attendance-demo.gif'),
     ], check=True)
     print(f'Updated combined video and looping preview under {media}')
