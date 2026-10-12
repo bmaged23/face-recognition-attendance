@@ -7,10 +7,6 @@ camera stream, and optionally record attendance. The project uses **AdaFace
 embeddings**, **MTCNN face detection and alignment**, and **Qdrant cosine
 search**, with one shared recognition pipeline for both entry points.
 
-Built and tested with Python 3.12.15, PyTorch 2.5.1 + CUDA 12.4, and an NVIDIA
-GTX 1660 Ti. The application focuses on inference and one-photo enrollment;
-it does not train a face recognition model.
-
 ## Demo
 
 ![Looping check-in and check-out recognition demo](docs/media/attendance-demo.gif)
