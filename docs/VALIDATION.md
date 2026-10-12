@@ -8,7 +8,7 @@ checkpoint. Model SHA-256:
 
 ## Software checks
 
-- All 70 application regression tests passed after the presentation cleanup,
+- All 71 application regression tests passed after the name-background update,
   including HTTP range handling and private-file exclusion for the demo server.
 - `pip check` reported no broken requirements.
 - Tests use actual in-memory Qdrant searches, Pillow/OpenCV media operations,
@@ -17,8 +17,13 @@ checkpoint. Model SHA-256:
   margin, including a runner-up below the absolute threshold.
 - Tracking tests verify current-frame boxes, one-to-one association, scheduled
   recognition, missing-track removal, and exact name/score reuse.
-- Annotation tests exercise percentages and rolling attendance panels.
+- Annotation tests exercise percentages, rolling attendance panels, and
+  text-sized black backgrounds that leave the rest of the image visible.
 - Both approved videos decode fully and use H.264/yuv420p with fast-start MP4.
+  The text-sized background update regenerates all 842 check-in frames and
+  1,513 check-out frames from the source MP4s on the GPU. The gallery uses the
+  original quality-selected stills with the approved preprocessing; thresholds,
+  refresh interval, names, and IDs are retained.
 - A headless Chromium playback check verified the final order: check-in seeks
   to 3 seconds, its real end event advances to check-out at 28 seconds, and
   check-out's real end event wraps to check-in at 3 seconds. Next/restart,

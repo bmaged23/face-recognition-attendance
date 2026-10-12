@@ -305,7 +305,8 @@ The shared attendance file contains only:
 
 Unobserved actions are `null`. Repeated sightings do not toggle attendance.
 Annotations add a left-side `Check-in` or `Check-out` heading and one black
-rectangle per name. When the column fills, the oldest visible name scrolls
+rectangle fitted to each displayed name, with padding. Long names are shortened
+to fit the column. When the column fills, the oldest visible name scrolls
 off; all attendance records remain in JSON. Per-run result files contain the
 people observed in that run, while the shared attendance file accumulates both
 actions across runs.
@@ -430,7 +431,7 @@ python -m unittest discover -s tests -v
 python -m pip check
 ```
 
-The 70 regression tests cover enrollment validation and IDs, cosine
+The 71 regression tests cover enrollment validation and IDs, cosine
 threshold/margin behavior, tracking, API jobs, media encoding, timestamps, and
 attendance state, and HTTP video-range requests. They verify software behavior,
 not recognition accuracy.

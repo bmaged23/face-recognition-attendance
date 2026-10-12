@@ -34,6 +34,21 @@ class AttendancePanelTests(unittest.TestCase):
         self.assertEqual(text.call_args_list[-1].args[1], f'Name {layout.capacity + 1}')
         self.assertEqual(len(text.call_args_list), layout.capacity + 1)
 
+    def test_background_fits_each_name_and_leaves_rest_of_frame_visible(self):
+        import cv2
+        frame = np.full((600, 800, 3), 180, dtype=np.uint8)
+        names = ['Sam', 'Emerson']
+        with patch('cv2.putText'):
+            annotate_attendance(frame, [{'name': name} for name in names], 'checkin')
+        layout = panel_layout(800, 600)
+        for index, name in enumerate(names):
+            text_width = cv2.getTextSize(name, cv2.FONT_HERSHEY_SIMPLEX,
+                                         layout.font_scale, 2)[0][0]
+            right = layout.margin + text_width + 20
+            y = layout.first_row + index * (layout.row_height + layout.gap) + 1
+            self.assertEqual(frame[y, right].tolist(), [0, 0, 0])
+            self.assertEqual(frame[y, right + 1].tolist(), [180, 180, 180])
+
     def test_long_names_fit_inside_rectangles(self):
         with patch('cv2.putText') as text:
             annotate_attendance(np.zeros((600, 800, 3), dtype=np.uint8),

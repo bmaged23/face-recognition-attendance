@@ -62,3 +62,24 @@ accuracy metrics. Test names are aliases.
 ChokePoint is limited to noncommercial research and personal experimentation.
 Refer to `docs/licenses/SOURCE_AND_LICENSE.html` and
 `MODIFIED_DATA_NOTICE.txt` for its original notice and derivative description.
+
+## Regenerate the published attendance demo
+
+With the retained color reference manifest, original stills, and source MP4s,
+run the approved recognition policy on the GPU from the beginning of each clip:
+
+```sh
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 python scripts/datasets/regenerate_attendance_demo.py
+python scripts/build_video_demo.py
+```
+
+The gallery uses the original selected stills with the same EXIF correction,
+1600-pixel thumbnail, and BGR conversion as the approved evaluation, before
+its JPEG exports. This avoids changing reference embeddings through an extra
+JPEG compression step.
+
+This resets only the demo attendance JSON and regenerates the two full annotated
+videos under `output/chokepoint_accuracy/improved/`. It retains the reference IDs
+and names and uses confidence 0.4, ambiguity margin 0.05, IoU 0.5, and refresh
+0.5 seconds. The second command combines check-in from second 3 and check-out
+from second 28 and updates the MP4 and looping GIF under `docs/media/`.

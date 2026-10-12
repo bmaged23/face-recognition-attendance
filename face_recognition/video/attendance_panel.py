@@ -40,11 +40,9 @@ def annotate_attendance(frame, records, action):
 
     def draw_row(text, top, row_height, header=False):
         left = layout.margin
-        right = min(width - 1, left + layout.width)
         bottom = min(height - 1, top + row_height - 1)
         if bottom < top:
             return
-        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 0), -1)
         padding = max(2, min(10, layout.width // 12))
         scale = layout.font_scale
         available = max(1, layout.width - 2 * padding)
@@ -56,6 +54,8 @@ def annotate_attendance(frame, records, action):
             text = text[:-1]
             label = text + '...' if text else ''
         (text_width, text_height), baseline = cv2.getTextSize(label, font, scale, thickness)
+        right = min(width - 1, left + layout.width, left + text_width + 2 * padding)
+        cv2.rectangle(frame, (left, top), (right, bottom), (0, 0, 0), -1)
         x = left + padding
         y = min(bottom - max(1, baseline), top + (row_height + text_height) // 2)
         cv2.putText(frame, label, (x, y), font, scale,
