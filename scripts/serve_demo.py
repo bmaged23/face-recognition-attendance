@@ -1,4 +1,4 @@
-"""Serve only the demo page, diagram, and two approved videos on localhost."""
+"""Serve only the demo page, diagram, and combined approved video on localhost."""
 import argparse
 from functools import partial
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
@@ -8,6 +8,7 @@ from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 VIDEOS = {
+    '/docs/media/attendance-demo.mp4',
     '/output/chokepoint_accuracy/improved/P2L_S5_C2_annotated.mp4',
     '/output/chokepoint_accuracy/improved/P2E_S5_C2_annotated.mp4',
 }
@@ -109,7 +110,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--port', type=int, default=8080)
     args = parser.parse_args()
-    missing = [path for path in VIDEOS if not (ROOT / path.lstrip('/')).is_file()]
+    missing = [path for path in ['/docs/media/attendance-demo.mp4'] if not (ROOT / path.lstrip('/')).is_file()]
     if missing:
         parser.error('Approved demo videos are missing: ' + ', '.join(missing))
     handler = partial(DemoHandler, directory=str(ROOT))

@@ -11,32 +11,28 @@ it does not train a face recognition model.
 
 ## Demo
 
-The local demo alternates between the two approved annotated ChokePoint clips:
+![Looping check-in and check-out recognition demo](docs/media/attendance-demo.gif)
 
-**Check-in from 00:03 → Check-out from 00:28 → repeat.**
+**Check-in from 00:03 → Check-out from 00:28 → repeat.** The preview above
+loops automatically in this README. Both clips are combined into one video,
+so the player does not need to load a second file between check-in and check-out.
+
+[Watch the full-quality looping video](https://bmaged23.github.io/face-recognition-attendance/docs/demo/)
+· [Download the combined MP4](https://github.com/bmaged23/face-recognition-attendance/raw/refs/heads/main/docs/media/attendance-demo.mp4)
+
+The full-quality player autoplays muted and repeats continuously. It has playback
+controls; if your browser blocks autoplay, press Play. GitHub README pages support
+the looping GIF preview, but do not execute an HTML video player with autoplay
+and loop controls. These are prerecorded results, not a live inference session.
+
+To view the same player locally after cloning:
 
 ```sh
 python scripts/serve_demo.py
 ```
 
-Open **http://localhost:8080/**. The videos autoplay muted, have playback
-controls, and advance to the next clip when the current one finishes. If your
-browser blocks autoplay, press Play. You can also open
-[the demo page](docs/demo/index.html) directly when both video files are present.
-This player shows prerecorded results; it does not rerun inference.
-
-The two videos are kept locally at:
-
-```text
-output/chokepoint_accuracy/improved/P2L_S5_C2_annotated.mp4
-output/chokepoint_accuracy/improved/P2E_S5_C2_annotated.mp4
-```
-
-Large videos and source datasets are excluded from Git. A fresh clone runs with
-your own photos and videos; to use this particular demo, copy the approved MP4s
-into the paths above. GitHub READMEs cannot run this JavaScript playlist or
-autoplay these locally ignored videos. The animated diagram below works as an
-ordinary README image.
+Open **http://localhost:8080/**. The combined demo and preview are included in
+Git; source datasets, original output files, and model checkpoints remain excluded.
 
 ## Pipeline
 

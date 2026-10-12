@@ -36,12 +36,12 @@
   <h1>Face Recognition & Attendance</h1>
   <p>One enrolled photo per person. Every-frame face detection, periodic GPU recognition,
      and explicit check-in or check-out records.</p>
-  <section class="player" aria-label="Annotated video playlist">
+  <section class="player" aria-label="Combined annotated video">
     <div class="toolbar">
-      <span id="clip-label">Check-in · starts at 00:03</span>
-      <div><button id="next" type="button">Next clip</button> <button id="restart" type="button">Restart playlist</button></div>
+      <span id="clip-label">Check-in → Check-out · continuous loop</span>
+      <div><button id="next" type="button">Jump to check-out</button> <button id="restart" type="button">Restart video</button></div>
     </div>
-    <video id="demo-video" controls muted autoplay playsinline preload="auto" aria-label="Annotated ChokePoint demo">
+    <video id="demo-video" controls muted autoplay loop playsinline src="../media/attendance-demo.mp4" preload="auto" aria-label="Annotated ChokePoint demo">
       Your browser does not support HTML video.
     </video>
     <p id="status" role="status" aria-live="polite">Loading check-in video…</p>
