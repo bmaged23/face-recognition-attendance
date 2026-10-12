@@ -1,5 +1,7 @@
 # Face Recognition & Attendance
 
+[![AdaFace paper · CVPR 2022](https://img.shields.io/badge/AdaFace-Paper%20%C2%B7%20CVPR%202022-blue)](https://arxiv.org/abs/2204.00964)
+
 Enroll someone from a single photograph, recognize them in a video or live
 camera stream, and optionally record attendance. The project uses **AdaFace
 embeddings**, **MTCNN face detection and alignment**, and **Qdrant cosine
