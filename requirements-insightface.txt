@@ -1,0 +1,7 @@
+# Install after requirements.txt when using RECOGNITION_FAMILY=insightface.
+insightface==1.0.1
+onnx<1.18
+onnxruntime==1.20.2
+# For GPU inference, replace onnxruntime with onnxruntime-gpu==1.20.2.
+# Reinstall that package with --force-reinstall --no-deps after InsightFace
+# installation so InsightFace's CPU dependency cannot overwrite its module.

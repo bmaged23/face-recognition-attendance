@@ -1,0 +1,828 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta content="en-us" http-equiv="Content-Language">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+    <title>ChokePoint Dataset</title>
+    <style>a {text-decoration: none} </style>
+  </head>
+  <body>
+    <center>
+      <table style="text-align: left; width: 60%; margin-left: auto;
+        margin-right: auto;" border="0" cellpadding="0" cellspacing="0">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;">
+              <table style="text-align: left; width: 100%;" border="0"
+                cellpadding="0" cellspacing="0">
+                <tbody>
+                  <tr>
+                    <td style="vertical-align: middle; width: 10%"> <br>
+                    </td>
+                    <td style="vertical-align: middle; width: 80%">
+                      <div style="text-align: center"> <big><big> <span
+                              style="font-weight: bold">ChokePoint
+                              Dataset</span> </big></big> </div>
+                    </td>
+                    <td style="vertical-align: middle; width: 10%"> <img
+                        src="figures/NICTA_logo_small_quant.png"
+                        width="62" border="0" height="74"> </td>
+                  </tr>
+                </tbody>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top; width: 100%"> <br>
+              <div style="text-align; justify;">
+                <p>
+                </p>
+                <center>
+                  <a href="#overview">Overview</a>&nbsp;&middot;
+                  <a href="#example">Example</a>&nbsp;&middot;
+                  <a href="#protocol">Protocol</a>&nbsp;&middot;
+                  <a href="#licence">Licence</a>&nbsp;&middot;
+                  <a href="#download">Download</a>&nbsp;&middot;
+                  <a href="#contacts">Contacts</a>&nbsp;&middot;
+                  <a href="#related">Related Datasets</a>&nbsp;&middot;
+                  <a href="#acknowledgement">Acknowledgement</a>
+                </center>
+                <p></p>
+                <br>
+                <hr class="grayline">
+                <br>
+                <a name="overview"></a>
+                <b>Overview</b>
+                <br>
+                <p style="text-align: justify">
+                  We collected a video dataset, termed ChokePoint,
+                  designed for experiments in person
+                  identification/verification under real-world
+                  surveillance conditions using existing technologies.
+                  An array of three cameras was placed above several
+                  portals (natural choke points in terms of pedestrian
+                  traffic) to capture subjects walking through each
+                  portal in a natural way (see <a href="#example">example</a>).
+While
+                  a person is walking through a portal, a sequence of
+                  face images (ie. a face set) can be captured. Faces in
+                  such sets will have variations in terms of
+                  illumination conditions, pose, sharpness, as well as
+                  misalignment due to automatic face
+                  localisation/detection.
+                  Due to the three camera configuration, one of the
+                  cameras is likely to capture a face set where a subset
+                  of the faces is near-frontal.
+                </p>
+                <p style="text-align: justify">
+                  The dataset consists of 25 subjects (19 male and 6
+                  female) in portal 1 and 29 subjects (23 male and 6
+                  female) in portal 2.
+                  The recording of portal 1 and portal 2 are one month
+                  apart.
+                  The dataset has frame rate of 30 fps and the image
+                  resolution is 800X600 pixels.
+                  In total, the dataset consists of 48 video sequences
+                  and 64,204 face images. In all sequences,
+                  only one subject is presented in the image at a time.
+                  The first 100 frames of each sequence are for
+                  background modelling where no foreground objects were
+                  presented.
+                </p>
+                <p style="text-align: justify">
+                  Each sequence was named according to the recording
+                  conditions (eg. P2E_S1_C3) where P, S, and C stand for
+                  portal, sequence and camera, respectively.
+                  E and L indicate subjects either entering or leaving
+                  the portal. The numbers indicate the respective
+                  portal, sequence and camera label. For example,
+                  P2L_S1_C3 indicates that the recording was done in
+                  Portal 2, with people leaving the portal, and captured
+                  by camera 3 in the first recorded sequence.
+                </p>
+                <p style="text-align: justify">
+                  To pose a more challenging real-world surveillance
+                  problems,
+                  two seqeunces (P2E_S5 and P2L_S5) were recorded with
+                  crowded scenario. In additional to the aforementioned
+                  variations, the sequences were presented with
+                  continuous occlusion.
+                  This phenomenon presents challenges in identidy
+                  tracking and face verification.
+                </p>
+                <p style="text-align: justify">
+                  This dataset can be applied, but not limited, to the
+                  following research areas: </p>
+                <ul>
+                  <li> person re-identification </li>
+                  <li> image set matching </li>
+                  <li> face quality measurement </li>
+                  <li> face clustering </li>
+                  <li> 3D face reconstruction </li>
+                  <li> pedestrian/face tracking </li>
+                  <li> background estimation and substraction </li>
+                </ul>
+                <p></p>
+                <br>
+                <hr class="grayline">
+                <br>
+                <a name="example"></a>
+                <b>Example</b>
+                <br>
+                <p style="text-align: justify">
+                  An example of the recording setup used for the
+                  ChokePoint dataset. A camera rig contains 3 cameras
+                  placed just above a door, used for simultaneously
+                  recording the entry of a person from 3 viewpoints. The
+                  variations between viewpoints allow for variations in
+                  walking directions, facilitating the capture of a
+                  near-frontal face by one of the cameras.
+                </p>
+                <table style="text-align: left; width: 90%; margin-left:
+                  auto; margin-right: auto;" border="0" cellpadding="0"
+                  cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 5%"> <br>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 30%"> <img
+                          src="figures/frame.jpg" width="300" border="0"
+                          height="430">
+                        <p> Camera Rig </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 20%"> <img
+                          src="figures/leftc.jpg" width="182" border="0"
+                          height="434">s
+                        <p> Camera 1 </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 20%"> <img
+                          src="figures/middlec.jpg" width="182"
+                          border="0" height="434">
+                        <p> Camera 2 </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 20%"> <img
+                          src="figures/rightc.jpg" width="182"
+                          border="0" height="434">
+                        <p> Camera 3 </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 5%"> <br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p style="text-align: justify">
+                  Example shots from the ChokePoint dataset, showing
+                  portals with various backgrounds.
+                </p>
+                <table style="text-align: left; width: 90%; margin-left:
+                  auto; margin-right: auto;" border="0" cellpadding="0"
+                  cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 25%"> <img
+                          src="figures/00000500.jpg" width="240"
+                          border="0" height="180">
+                        <p> P1E - Camera 1 </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 25%"> <img
+                          src="figures/00003627.jpg" width="240"
+                          border="0" height="180">
+                        <p> P1L - Camera 1 </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 25%"> <img
+                          src="figures/00001167.jpg" width="240"
+                          border="0" height="180">
+                        <p> P2E - Camera 2 </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 25%"> <img
+                          src="figures/00002875.jpg" width="240"
+                          border="0" height="180">
+                        <p> P2L - Camera 2 </p>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <table style="text-align: left; width: 90%; margin-left:
+                  auto; margin-right: auto;" border="0" cellpadding="0"
+                  cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 25%"> <br>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 25%"> <img
+                          src="figures/00000417.jpg" width="240"
+                          border="0" height="180">
+                        <p> P2E_S5 - Camera 2 </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 25%"> <img
+                          src="figures/00001112.jpg" width="240"
+                          border="0" height="180">
+                        <p> P2L_S5 - Camera 2 </p>
+                      </td>
+                      <td style="vertical-align: middle; text-align:
+                        center; width: 25%"> <br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <hr class="grayline">
+                <br>
+                <a name="protocol"></a>
+                <b>Protocol</b>
+                <br>
+                <p style="text-align: justify">
+                  We designed a baseline verification protocol
+                  (protocol_baseline) for this dataset.
+                  In this protocol, video sequences are divided into two
+                  groups (G1 and G2),
+                  where each group played the role of development set
+                  and evaluation set in turn. In each group, all
+                  possible genuine and imposter pairs were generated.
+                  Parameters and threshold are first learned on the
+                  development set and then applied on the evaluation
+                  set. The average verification rate is used for
+                  reporting results. </p>
+                <table style="text-align: center; width: 50%;
+                  margin-left: auto; margin-right: auto;" border="1"
+                  cellpadding="5" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td> G1 </td>
+                      <td>
+                        <table style="text-align: center; width: 100%;
+                          margin-left: auto; margin-right: auto;"
+                          border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td> P1E_S1_C1 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P1E_S2_C2 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P2E_S2_C2 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P2E_S1_C3 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> P1L_S1_C1 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P1L_S2_C2 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P2L_S2_C2 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P2L_S1_C1 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td> G2 </td>
+                      <td>
+                        <table style="text-align: center; width: 100%;
+                          margin-left: auto; margin-right: auto;"
+                          border="0" cellpadding="0" cellspacing="0">
+                          <tbody>
+                            <tr>
+                              <td> P1E_S3_C3 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P1E_S4_C1 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P2E_S4_C2 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P2E_S3_C1 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td> P1L_S3_C3 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P1L_S4_C1 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P2L_S4_C2 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                              <td> P2L_S3_C3 </td>
+                              <td style="width: 5px"> <br>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <br>
+                <p style="text-align: justify">
+                  To study the effect of person verification under
+                  different environments and time interval between
+                  recording, following case studies can be considered: </p>
+                <ol>
+                  <li> case_study_1
+                    <ul>
+                      <li>indoor scene only</li>
+                      <li>short time interval</li>
+                    </ul>
+                    <br>
+                    <table style="text-align: center; width: 30%;;
+                      margin-right: auto;" border="1" cellpadding="5"
+                      cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td> G1 </td>
+                          <td>
+                            <table style="text-align: center; width:
+                              100%; margin-left: auto; margin-right:
+                              auto;" border="0" cellpadding="0"
+                              cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td> P1E_S1_C1 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                  <td> P1E_S2_C2 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td> P1L_S1_C1 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                  <td> P1L_S2_C2 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> G2 </td>
+                          <td>
+                            <table style="text-align: center; width:
+                              100%; margin-left: auto; margin-right:
+                              auto;" border="0" cellpadding="0"
+                              cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td> P1E_S3_C3 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                  <td> P1E_S4_C1 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td> P1L_S3_C3 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                  <td> P1L_S4_C1 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br>
+                  </li>
+                  <li> case_study_2
+                    <ul>
+                      <li>indoor and outdoor scene</li>
+                      <li>short time interval</li>
+                    </ul>
+                    <br>
+                    <table style="text-align: center; width: 30%;
+                      margin-right: auto;" border="1" cellpadding="5"
+                      cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td> G1 </td>
+                          <td>
+                            <table style="text-align: center; width:
+                              100%; margin-left: auto; margin-right:
+                              auto;" border="0" cellpadding="0"
+                              cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td> P2E_S2_C2 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                  <td> P2E_S1_C3 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td> P2L_S2_C2 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                  <td> P2L_S1_C1 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> G2 </td>
+                          <td>
+                            <table style="text-align: center; width:
+                              100%; margin-left: auto; margin-right:
+                              auto;" border="0" cellpadding="0"
+                              cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td> P2E_S4_C2 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                  <td> P2E_S3_C1 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td> P2L_S4_C2 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                  <td> P2L_S3_C3 </td>
+                                  <td style="width: 5px"> <br>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br>
+                  </li>
+                  <li> case_study_3
+                    <ul>
+                      <li>indoor and outdoor scene</li>
+                      <li>long time interval</li>
+                      <li>genuine and imposter pairs shall be generated
+                        by matching each sequence of set 1 with set 2.</li>
+                    </ul>
+                    <br>
+                    <table style="text-align: center; width: 30%;
+                      margin-right: auto;" border="1" cellpadding="5"
+                      cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <th> <br>
+                          </th>
+                          <th> Set 1 </th>
+                          <th> Set 2 </th>
+                        </tr>
+                        <tr>
+                          <td> G1 </td>
+                          <td> P1E_S1_C1 P1E_S2_C2 P1L_S1_C1 P1L_S2_C2
+                            <table style="text-align: center; width:
+                              100%; margin-left: auto; margin-right:
+                              auto;" border="0" cellpadding="0"
+                              cellspacing="0">
+                              <tbody>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td> P2E_S2_C2 P2E_S1_C3 P2L_S2_C2 P2L_S1_C1
+                            <table style="text-align: center; width:
+                              100%; margin-left: auto; margin-right:
+                              auto;" border="0" cellpadding="0"
+                              cellspacing="0">
+                              <tbody>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td> G2 </td>
+                          <td> P1E_S3_C3 P1E_S4_C1 P1L_S3_C3 P1L_S4_C1
+                            <table style="text-align: center; width:
+                              100%; margin-left: auto; margin-right:
+                              auto;" border="0" cellpadding="0"
+                              cellspacing="0">
+                              <tbody>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td> P2E_S4_C2 P2E_S3_C1 P2L_S4_C2 P2L_S3_C3
+                            <table style="text-align: center; width:
+                              100%; margin-left: auto; margin-right:
+                              auto;" border="0" cellpadding="0"
+                              cellspacing="0">
+                              <tbody>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                                <tr>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <br>
+                  </li>
+                </ol>
+                <p></p>
+                <p style="text-align: justify">
+                  We also encourage the experiments to be conducted with
+                  two evaluation conditions: </p>
+                <ol>
+                  <li> single camera (SC)<br>
+                    - using faces from the camera with most frontal view
+                    (listed in above tables). </li>
+                  <li> multiple camera (MC)<br>
+                    - using faces from all three cameras. For example,
+                    images for portal 1E and sequence 1 will are taken
+                    from P1E_S1_C1, P1E_S1_C2 and P1E_S1_C3. </li>
+                </ol>
+                <p></p>
+                <br>
+                <hr class="grayline&quot;">
+                <br>
+                <a name="licence"></a>
+                <b>Licence</b>
+                <br>
+                <p>
+                  This dataset ('Licensed Material') is made available
+                  to the scientific community for non-commercial
+                  research purposes such as academic research, teaching,
+                  scientific publications or personal experimentation.
+                  Permission is granted by National ICT Australia
+                  Limited (NICTA) to you (the 'Licensee') to use, copy
+                  and distribute the Licensed Material in accordance
+                  with the following terms and conditions: </p>
+                <ol>
+                  <li> Licensee must include a reference to NICTA and
+                    the following publication in any published work that
+                    makes use of the Licensed Material: <br>
+                    <br>
+                    <ul>
+                      Y. Wong, S. Chen, S. Mau, C. Sanderson, B.C.
+                      Lovell<br>
+                      <b> <a
+href="http://conradsanderson.id.au/pdfs/wong_face_selection_cvpr_biometrics_2011.pdf">
+                          Patch-based Probabilistic Image Quality
+                          Assessment for Face Selection and Improved
+                          Video-based Face Recognition </a> </b> <br>
+                      <i>IEEE Biometrics Workshop, Computer Vision and
+                        Pattern Recognition (CVPR) Workshops</i>, pages
+                      81-88. IEEE, June 2011. <br>
+                      <br>
+                      Bibtex entry:
+                      <pre>@INPROCEEDINGS{wong_cvprw_2011,
+   AUTHOR    = {Yongkang Wong and Shaokang Chen and Sandra Mau and Conrad Sanderson and Brian C. Lovell},
+   TITLE     = {Patch-based Probabilistic Image Quality Assessment for Face Selection and Improved Video-based Face Recognition},
+   BOOKTITLE = {IEEE Biometrics Workshop, Computer Vision and Pattern Recognition (CVPR) Workshops},
+   YEAR      = {2011},
+   pages     = {81-88},
+   month     = {June},
+   publisher = {IEEE}
+}
+</pre>
+                    </ul>
+                  </li>
+                  <br>
+                  <li> If Licensee alters the content of the Licensed
+                    Material or creates any derivative work, Licensee
+                    must include in the altered Licensed Material or
+                    derivative work prominent notices to ensure that any
+                    recipients know that they are not receiving the
+                    original Licensed Material. </li>
+                  <br>
+                  <li> Licensee may not use or distribute the Licensed
+                    Material or any derivative work for commercial
+                    purposes including but not limited to, licensing or
+                    selling the Licensed Material or using the Licensed
+                    Material for commercial gain. </li>
+                  <br>
+                  <li> The Licensed Material is provided 'AS IS',
+                    without any express or implied warranties. NICTA
+                    does not accept any responsibility for errors or
+                    omissions in the Licensed Material. </li>
+                  <br>
+                  <li> This original license notice must be retained in
+                    all copies or derivatives of the Licensed Material.
+                  </li>
+                  <br>
+                  <li> All rights not expressly granted to the Licensee
+                    are reserved by NICTA. </li>
+                  <br>
+                </ol>
+                <p></p>
+                <br>
+                <hr class="grayline">
+                <br>
+                <a name="download"></a>
+                <b>Download</b>
+                <br>
+                <p style="text-align: justify">
+                  <b> Notes </b> </p>
+                <ul>
+                  <li> The ChokePoint dataset taking up about 12 Gb.
+                    Each tar.xz file is on average around 200 Mb </li>
+                  <br>
+                  <li> Brief description of the data can be found in <a href="https://zenodo.org/record/815657/files/README.txt">README</a>
+                  </li>
+                  <br>
+                  <li> The cropped face images were extracted using the
+                    manually labelled eye location. The faces has the
+                    size of 96x96 pixels </li>
+                  <br>
+                  <li> Please download only <b>one file at a time</b>
+                    -- this is so the server is not overloaded </li>
+                  <br>
+                  <li> Microsoft Windows user can extract the *.tar.xz
+                    files with <a href="http://www.7-zip.org/">7-Zip</a>
+                  </li>
+                </ul>
+                <p></p>
+                <br>
+                <p style="text-align: justify">
+                  <b>Original files:</b><br>
+                </p>
+                <ol>
+                  <li><a href="https://zenodo.org/record/815657/files/groundtruth.tar.xz">groundtruth.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1E_S1.tar.xz">P1E_S1.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1E_S2.tar.xz">P1E_S2.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1E_S3.tar.xz">P1E_S3.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1E_S4.tar.xz">P1E_S4.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1L_S1.tar.xz">P1L_S1.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1L_S2.tar.xz">P1L_S2.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1L_S3.tar.xz">P1L_S3.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1L_S4.tar.xz">P1L_S4.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2E_S1.tar.xz">P2E_S1.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2E_S2.tar.xz">P2E_S2.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2E_S3.tar.xz">P2E_S3.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2E_S4.tar.xz">P2E_S4.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2E_S5.tar.xz">P2E_S5.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2L_S1.tar.xz">P2L_S1.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2L_S2.tar.xz">P2L_S2.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2L_S3.tar.xz">P2L_S3.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2L_S4.tar.xz">P2L_S4.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2L_S5.tar.xz">P2L_S5.tar.xz</a><br>
+                  </li>
+                </ol>
+                <p></p>
+                <br>
+                <p style="text-align: justify">
+                  <b>Cropped face images:</b><br>
+                </p>
+                <ol>
+                  <li><a href="https://zenodo.org/record/815657/files/P1E.tar.xz">P1E.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P1L.tar.xz">P1L.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2E.tar.xz">P2E.tar.xz</a><br>
+                  </li>
+                  <li><a href="https://zenodo.org/record/815657/files/P2L.tar.xz">P2L.tar.xz</a><br>
+                  </li>
+                </ol>
+                <p></p>
+                <br>
+                <hr class="grayline">
+                <br>
+                <a name="contacts"></a>
+                <b>Contacts</b>
+                <br>
+                <p style="text-align: justify">
+                  If you have any questions regarding to the dataset,
+                  please contact: </p>
+                <ul>yongkang&nbsp;d&ouml;t&nbsp;wong&nbsp;&auml;t&nbsp;ieee&nbsp;d&ouml;t&nbsp;org<span style="display: none;">xyz</span>
+                </ul>
+                <p></p>
+                <br>
+                <hr class="grayline">
+                <br>
+                <a name="related"></a>
+                <b>Related Datasets</b>
+                <br>
+                <p style="text-align: left;"> </p>
+                <ul>
+                  <li><a href="http://arma.sourceforge.net/vb100/">VB100
+                      Bird Dataset</a> - surveillance videos of 100 bird
+                    species, for experiments in fine-grained
+                    classification</li>
+                  <li><a href="http://conradsanderson.id.au/vidtimit">VidTIMIT
+                      Dataset</a> - audio-visual recordings of people
+                    reciting phonetically balanced sentences</li>
+                </ul>
+                <p></p>
+                <br>
+                <hr class="grayline">
+                <br>
+                <a name="acknowledgement"></a>
+                <b>Acknowledgement</b>
+                <br>
+                <br>
+                <table style="text-align: left; width: 100%;" border="0"
+                  cellpadding="0" cellspacing="0">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align: middle; width: 5%"> <br>
+                      </td>
+                      <td style="vertical-align: middle; width: 10%"> <img
+                          src="figures/NICTA_logo_small_quant.png"
+                          width="62" border="0" height="74"> </td>
+                      <td style="vertical-align: middle; width: 70%">
+                        <p style="text-align: justify"> The chokepoint
+                          dataset is sponsored by NICTA. NICTA is funded
+                          by the Australian Government as represented by
+                          the Department of Broadband, Communications
+                          and the Digital Economy, as well as the
+                          Australian Research Council through the ICT
+                          Centre of Excellence program. </p>
+                      </td>
+                      <td style="vertical-align: middle; width: 15%"> <br>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      <br>
+    </center>
+  </body>
+</html>

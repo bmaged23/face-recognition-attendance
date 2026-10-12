@@ -1,0 +1,40 @@
+# Local environments and private configuration
+/.venv/
+/.python/
+/.cache/
+/archive/
+/description/
+.env
+.env.*
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Python build and test artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+
+# Photos, datasets, database state, and generated results
+/input/
+/output/
+/data/
+*.log
+*.lock
+
+# Large checkpoints are downloaded separately
+*.ckpt
+*.pt
+*.pth
+*.onnx
+*.safetensors
+/vendor/adaface/pretrained/
+
+# Documentation image assets are intentionally tracked.

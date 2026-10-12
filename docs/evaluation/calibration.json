@@ -1,0 +1,166 @@
+{
+  "threshold": 0.32,
+  "min_margin": 0.0,
+  "recommended_threshold": 0.4,
+  "recommended_min_margin": 0.05,
+  "recommendation_reason": "Do not lower the existing threshold based on this limited development set. A 0.05 ambiguity margin preserves its measured accepted-correct coverage with color references.",
+  "policy": "Maximize correct accepted development probes with <=1% wrong identities and <=1% leave-one-out false-accept proxy",
+  "limitations": "Camera 1 is a held-out view of the same S2 recording, not a separate recording. Leave-one-out is a proxy, not an unseen-person benchmark. Accuracy is conditional on detection. S5 is unlabeled.",
+  "model_signature": "v1:adaface:ir_100_webface12m:native-alignment:bgr:0e7a3238d2a50f3fe3860782534928ac7cb2598977cf897f6869fd5ac2493fd0",
+  "results": {
+    "camera2": {
+      "old_grayscale_at_040": {
+        "probes": 201,
+        "correct_accepted": 195,
+        "wrong_identity_accepted": 0,
+        "rejected": 6,
+        "top1_correct_without_threshold": 201,
+        "leave_one_out_false_accepts": 0
+      },
+      "color_at_040": {
+        "probes": 201,
+        "correct_accepted": 200,
+        "wrong_identity_accepted": 0,
+        "rejected": 1,
+        "top1_correct_without_threshold": 201,
+        "leave_one_out_false_accepts": 0
+      },
+      "color_calibrated": {
+        "probes": 201,
+        "correct_accepted": 201,
+        "wrong_identity_accepted": 0,
+        "rejected": 0,
+        "top1_correct_without_threshold": 201,
+        "leave_one_out_false_accepts": 0
+      },
+      "color_recommended": {
+        "probes": 201,
+        "correct_accepted": 200,
+        "wrong_identity_accepted": 0,
+        "rejected": 1,
+        "top1_correct_without_threshold": 201,
+        "leave_one_out_false_accepts": 0
+      },
+      "threshold_sweep": {
+        "0.4": {
+          "probes": 201,
+          "correct_accepted": 200,
+          "wrong_identity_accepted": 0,
+          "rejected": 1,
+          "top1_correct_without_threshold": 201,
+          "leave_one_out_false_accepts": 0
+        },
+        "0.45": {
+          "probes": 201,
+          "correct_accepted": 194,
+          "wrong_identity_accepted": 0,
+          "rejected": 7,
+          "top1_correct_without_threshold": 201,
+          "leave_one_out_false_accepts": 0
+        },
+        "0.5": {
+          "probes": 201,
+          "correct_accepted": 183,
+          "wrong_identity_accepted": 0,
+          "rejected": 18,
+          "top1_correct_without_threshold": 201,
+          "leave_one_out_false_accepts": 0
+        },
+        "0.55": {
+          "probes": 201,
+          "correct_accepted": 155,
+          "wrong_identity_accepted": 0,
+          "rejected": 46,
+          "top1_correct_without_threshold": 201,
+          "leave_one_out_false_accepts": 0
+        },
+        "0.6": {
+          "probes": 201,
+          "correct_accepted": 123,
+          "wrong_identity_accepted": 0,
+          "rejected": 78,
+          "top1_correct_without_threshold": 201,
+          "leave_one_out_false_accepts": 0
+        }
+      },
+      "missed_labeled_samples": 31
+    },
+    "camera1": {
+      "old_grayscale_at_040": {
+        "probes": 135,
+        "correct_accepted": 129,
+        "wrong_identity_accepted": 0,
+        "rejected": 6,
+        "top1_correct_without_threshold": 135,
+        "leave_one_out_false_accepts": 0
+      },
+      "color_at_040": {
+        "probes": 135,
+        "correct_accepted": 134,
+        "wrong_identity_accepted": 0,
+        "rejected": 1,
+        "top1_correct_without_threshold": 135,
+        "leave_one_out_false_accepts": 0
+      },
+      "color_calibrated": {
+        "probes": 135,
+        "correct_accepted": 135,
+        "wrong_identity_accepted": 0,
+        "rejected": 0,
+        "top1_correct_without_threshold": 135,
+        "leave_one_out_false_accepts": 1
+      },
+      "color_recommended": {
+        "probes": 135,
+        "correct_accepted": 134,
+        "wrong_identity_accepted": 0,
+        "rejected": 1,
+        "top1_correct_without_threshold": 135,
+        "leave_one_out_false_accepts": 0
+      },
+      "threshold_sweep": {
+        "0.4": {
+          "probes": 135,
+          "correct_accepted": 134,
+          "wrong_identity_accepted": 0,
+          "rejected": 1,
+          "top1_correct_without_threshold": 135,
+          "leave_one_out_false_accepts": 0
+        },
+        "0.45": {
+          "probes": 135,
+          "correct_accepted": 132,
+          "wrong_identity_accepted": 0,
+          "rejected": 3,
+          "top1_correct_without_threshold": 135,
+          "leave_one_out_false_accepts": 0
+        },
+        "0.5": {
+          "probes": 135,
+          "correct_accepted": 126,
+          "wrong_identity_accepted": 0,
+          "rejected": 9,
+          "top1_correct_without_threshold": 135,
+          "leave_one_out_false_accepts": 0
+        },
+        "0.55": {
+          "probes": 135,
+          "correct_accepted": 112,
+          "wrong_identity_accepted": 0,
+          "rejected": 23,
+          "top1_correct_without_threshold": 135,
+          "leave_one_out_false_accepts": 0
+        },
+        "0.6": {
+          "probes": 135,
+          "correct_accepted": 79,
+          "wrong_identity_accepted": 0,
+          "rejected": 56,
+          "top1_correct_without_threshold": 135,
+          "leave_one_out_false_accepts": 0
+        }
+      },
+      "missed_labeled_samples": 90
+    }
+  }
+}

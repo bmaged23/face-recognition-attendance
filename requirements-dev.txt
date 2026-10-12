@@ -1,0 +1,2 @@
+# Tests are included in the exact environment snapshot.
+-r requirements.txt

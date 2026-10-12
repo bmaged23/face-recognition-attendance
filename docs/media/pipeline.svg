@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 1160" role="img" aria-labelledby="title desc">
+<title id="title">Face recognition and optional attendance pipeline</title>
+<desc id="desc">One photo is enrolled as a UUID and AdaFace embedding in Qdrant. Video or live frames are detected and aligned with MTCNN. IoU reuses identities between half-second recognition refreshes. Fresh AdaFace embeddings are compared with the two closest references. Accepted identities are exported once per run; unknowns are omitted. Optional explicit check-in or check-out records the first accepted sighting in a shared attendance file. Current face boxes and optional percentages are annotated.</desc>
+<rect width="1440" height="1160" fill="#0b1220"/>
+<polyline points="280,165 340,165" fill="none" stroke="#bda0ff" stroke-width="3"/>
+<polygon points="340,165 331.22417438109625,169.79425538604204 331.22417438109625,160.20574461395796" fill="#bda0ff"/>
+<polyline points="560,165 620,165" fill="none" stroke="#bda0ff" stroke-width="3"/>
+<polygon points="620,165 611.2241743810963,169.79425538604204 611.2241743810963,160.20574461395796" fill="#bda0ff"/>
+<polyline points="840,165 1100,165" fill="none" stroke="#bda0ff" stroke-width="3"/>
+<polygon points="1100,165 1091.2241743810962,169.79425538604204 1091.2241743810962,160.20574461395796" fill="#bda0ff"/>
+<polyline points="280,415 340,415" fill="none" stroke="#64dec7" stroke-width="3"/>
+<polygon points="340,415 331.22417438109625,419.79425538604204 331.22417438109625,410.20574461395796" fill="#64dec7"/>
+<polyline points="560,415 620,415" fill="none" stroke="#64dec7" stroke-width="3"/>
+<polygon points="620,415 611.2241743810963,419.79425538604204 611.2241743810963,410.20574461395796" fill="#64dec7"/>
+<polyline points="840,415 930,415" fill="none" stroke="#64dec7" stroke-width="3"/>
+<polygon points="930,415 921.2241743810963,419.79425538604204 921.2241743810963,410.20574461395796" fill="#64dec7"/>
+<polyline points="1060,460 1060,550" fill="none" stroke="#64dec7" stroke-width="3"/>
+<polygon points="1060,550 1055.205744613958,541.2241743810963 1064.794255386042,541.2241743810963" fill="#64dec7"/>
+<polyline points="930,595 840,595" fill="none" stroke="#64dec7" stroke-width="3"/>
+<polygon points="840,595 848.7758256189037,590.205744613958 848.7758256189037,599.794255386042" fill="#64dec7"/>
+<polyline points="620,595 560,595" fill="none" stroke="#64dec7" stroke-width="3"/>
+<polygon points="560,595 568.7758256189037,590.205744613958 568.7758256189037,599.794255386042" fill="#64dec7"/>
+<polyline points="340,595 280,595" fill="none" stroke="#64dec7" stroke-width="3"/>
+<polygon points="280,595 288.77582561890375,590.205744613958 288.77582561890375,599.794255386042" fill="#64dec7"/>
+<polyline points="1230,210 1230,285 875,285 875,495 730,495 730,550" fill="none" stroke="#bda0ff" stroke-width="3"/>
+<polygon points="730,550 725.205744613958,541.2241743810963 734.794255386042,541.2241743810963" fill="#bda0ff"/>
+<polyline points="1190,415 1380,415 1380,710 30,710 30,595 60,595" fill="none" stroke="#9fb0c8" stroke-width="3"/>
+<polygon points="60,595 51.224174381096276,599.794255386042 51.224174381096276,590.205744613958" fill="#9fb0c8"/>
+<polyline points="170,640 170,805 200,805 200,875" fill="none" stroke="#64dec7" stroke-width="3"/>
+<polygon points="200,875 195.20574461395796,866.2241743810963 204.79425538604204,866.2241743810963" fill="#64dec7"/>
+<polyline points="170,805 620,805 620,875" fill="none" stroke="#ffbe76" stroke-width="3"/>
+<polygon points="620,875 615.205744613958,866.2241743810963 624.794255386042,866.2241743810963" fill="#ffbe76"/>
+<polyline points="750,920 810,920 810,833 870,833" fill="none" stroke="#ffbe76" stroke-width="3"/>
+<polygon points="870,833 861.2241743810963,837.794255386042 861.2241743810963,828.205744613958" fill="#ffbe76"/>
+<polyline points="810,920 810,1013 870,1013" fill="none" stroke="#ffbe76" stroke-width="3"/>
+<polygon points="870,1013 861.2241743810963,1017.794255386042 861.2241743810963,1008.205744613958" fill="#ffbe76"/>
+<polyline points="1090,833 1135,833 1135,900 1180,900" fill="none" stroke="#ffbe76" stroke-width="3"/>
+<polygon points="1180,900 1171.2241743810962,904.794255386042 1171.2241743810962,895.205744613958" fill="#ffbe76"/>
+<polyline points="1090,1013 1135,1013 1135,940 1180,940" fill="none" stroke="#ffbe76" stroke-width="3"/>
+<polygon points="1180,940 1171.2241743810962,944.794255386042 1171.2241743810962,935.205744613958" fill="#ffbe76"/>
+<rect x="60" y="120" width="220" height="90" rx="12" fill="#142036" stroke="#bda0ff" stroke-width="2"/>
+<text x="170.0" y="159" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#e7edf7">One photo + name</text>
+<text x="170.0" y="190" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">English display name</text>
+<rect x="340" y="120" width="220" height="90" rx="12" fill="#142036" stroke="#bda0ff" stroke-width="2"/>
+<text x="450.0" y="159" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="21" fill="#e7edf7">MTCNN alignment</text>
+<text x="450.0" y="190" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Require exactly one face</text>
+<rect x="620" y="120" width="220" height="90" rx="12" fill="#142036" stroke="#bda0ff" stroke-width="2"/>
+<text x="730.0" y="159" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="19" fill="#e7edf7">AdaFace embedding</text>
+<text x="730.0" y="190" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">112×112 BGR → 512-D</text>
+<rect x="1100" y="120" width="260" height="90" rx="12" fill="#142036" stroke="#bda0ff" stroke-width="2"/>
+<text x="1230.0" y="159" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Qdrant gallery</text>
+<text x="1230.0" y="190" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">UUID + name + embedding</text>
+<rect x="60" y="370" width="220" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="170.0" y="409" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#e7edf7">Video / live camera</text>
+<text x="170.0" y="440" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Source time / wall time</text>
+<rect x="340" y="370" width="220" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="450.0" y="409" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="22" fill="#e7edf7">MTCNN detection</text>
+<text x="450.0" y="440" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Align every detected face</text>
+<rect x="620" y="370" width="220" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="730.0" y="409" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">IoU association</text>
+<text x="730.0" y="440" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Current frame boxes · ≥0.5</text>
+<rect x="930" y="370" width="260" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="1060.0" y="409" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Recognition due?</text>
+<text x="1060.0" y="440" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">New track / ≥0.5 seconds</text>
+<rect x="930" y="550" width="260" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="1060.0" y="589" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">AdaFace on GPU</text>
+<text x="1060.0" y="620" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Normalized 512-D embedding</text>
+<rect x="620" y="550" width="220" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="730.0" y="589" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Cosine retrieval</text>
+<text x="730.0" y="620" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Top-1 match + runner-up</text>
+<rect x="340" y="550" width="220" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="450.0" y="589" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Accept identity?</text>
+<text x="450.0" y="620" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Score ≥0.4 · gap ≥0.05</text>
+<rect x="60" y="550" width="220" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="170.0" y="589" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="22" fill="#e7edf7">Match / Unknown</text>
+<text x="170.0" y="620" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Retain current face box</text>
+<rect x="60" y="875" width="280" height="90" rx="12" fill="#142036" stroke="#64dec7" stroke-width="2"/>
+<text x="200.0" y="914" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Recognition JSON</text>
+<text x="200.0" y="945" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">id · name · first-seen time</text>
+<rect x="490" y="875" width="260" height="90" rx="12" fill="#142036" stroke="#ffbe76" stroke-width="2"/>
+<text x="620.0" y="914" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Attendance mode</text>
+<text x="620.0" y="945" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">Explicit action + timestamp</text>
+<rect x="870" y="790" width="220" height="85" rx="12" fill="#142036" stroke="#ffbe76" stroke-width="2"/>
+<text x="980.0" y="829" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Check-in</text>
+<text x="980.0" y="860" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">First confirmed sighting</text>
+<rect x="870" y="970" width="220" height="85" rx="12" fill="#142036" stroke="#ffbe76" stroke-width="2"/>
+<text x="980.0" y="1009" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Check-out</text>
+<text x="980.0" y="1040" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">First confirmed sighting</text>
+<rect x="1180" y="870" width="230" height="100" rx="12" fill="#142036" stroke="#ffbe76" stroke-width="2"/>
+<text x="1295.0" y="909" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="23" fill="#e7edf7">Attendance JSON</text>
+<text x="1295.0" y="940" text-anchor="middle" font-family="DejaVu Sans, sans-serif" font-size="15" fill="#9fb0c8">id · name · checkin · checkout</text>
+<text x="60" y="65" font-family="DejaVu Sans, sans-serif" font-size="25" fill="#bda0ff">ENROLL ONCE · ONE REFERENCE PHOTO PER PERSON</text>
+<text x="60" y="335" font-family="DejaVu Sans, sans-serif" font-size="25" fill="#64dec7">RECOGNIZE · DETECT EVERY FRAME</text>
+<text x="865" y="145" font-family="DejaVu Sans, sans-serif" font-size="18" fill="#bda0ff">Generate UUID</text>
+<text x="750" y="263" font-family="DejaVu Sans, sans-serif" font-size="18" fill="#bda0ff">Read enrolled references</text>
+<text x="1070" y="504" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#64dec7">Yes</text>
+<text x="1000" y="695" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#9fb0c8">No: reuse previous name + score</text>
+<text x="185" y="777" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#9fb0c8">Known identities only · Unknown is omitted from JSON and attendance</text>
+<text x="60" y="1097" font-family="DejaVu Sans, sans-serif" font-size="22" fill="#e7edf7">ANNOTATION: current boxes + names + optional score %; attendance adds a rolling name panel.</text>
+<text x="60" y="1131" font-family="DejaVu Sans, sans-serif" font-size="20" fill="#9fb0c8">Check-in / check-out is selected by the caller; the system does not infer entry or exit direction.</text>
+</svg>

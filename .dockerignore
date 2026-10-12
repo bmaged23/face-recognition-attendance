@@ -1,0 +1,14 @@
+.git/
+.env
+.venv/
+.python/
+.cache/
+archive/
+description/
+input/
+output/
+tests/
+docs/
+**/__pycache__/
+**/*.pyc
+vendor/adaface/pretrained/

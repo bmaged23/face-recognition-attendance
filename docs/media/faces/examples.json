@@ -1,0 +1,71 @@
+{
+  "source_sequence": "P2E_S5_C2",
+  "source_seconds": 12,
+  "model": "ir_100_webface12m",
+  "device": "cuda",
+  "examples": [
+    {
+      "example": 1,
+      "bbox": [
+        197,
+        277,
+        287,
+        393
+      ],
+      "embedding_dimensions": 512,
+      "embedding_norm": 1.0,
+      "first_eight_values": [
+        -0.05465,
+        -0.02379,
+        0.05842,
+        0.10818,
+        0.00609,
+        -0.02245,
+        0.01077,
+        -0.03173
+      ]
+    },
+    {
+      "example": 2,
+      "bbox": [
+        459,
+        113,
+        514,
+        183
+      ],
+      "embedding_dimensions": 512,
+      "embedding_norm": 1.0,
+      "first_eight_values": [
+        0.00307,
+        0.01014,
+        -0.00308,
+        -0.07565,
+        0.00946,
+        -0.05083,
+        -0.03275,
+        0.03054
+      ]
+    },
+    {
+      "example": 3,
+      "bbox": [
+        317,
+        146,
+        363,
+        210
+      ],
+      "embedding_dimensions": 512,
+      "embedding_norm": 1.0,
+      "first_eight_values": [
+        0.09862,
+        -0.00712,
+        -0.02318,
+        0.03024,
+        0.03391,
+        0.01196,
+        -0.00943,
+        0.03024
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+services:
+  qdrant:
+    image: qdrant/qdrant:v1.18.0
+    ports:
+      - "5333:6333"
+    volumes:
+      - qdrant_data:/qdrant/storage
+    restart: unless-stopped
+  face_recognition:
+    build: .
+    env_file:
+      - .env
+    ports:
+      - "7323:7323"
+    environment:
+      QDRANT_URL: http://qdrant:6333
+      DEVICE: cuda
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    volumes:
+      - ./vendor/adaface/pretrained:/app/vendor/adaface/pretrained:ro
+      - ./input:/app/input:ro
+      - ./output:/app/output
+    depends_on:
+      - qdrant
+    restart: unless-stopped
+volumes:
+  qdrant_data:

@@ -1,0 +1,89 @@
+{
+  "accuracy_measured_on_crowded_videos": false,
+  "videos": [
+    {
+      "sequence": "P2E_S5_C2",
+      "frames": 842,
+      "policies": {
+        "old_refresh_None": {
+          "named_faces": 2046,
+          "total_faces": 2398,
+          "embedding_requests": 2398,
+          "disagreements_with_every_frame": 0
+        },
+        "old_refresh_1.0": {
+          "named_faces": 1735,
+          "total_faces": 2398,
+          "embedding_requests": 311,
+          "disagreements_with_every_frame": 455
+        },
+        "old_refresh_0.5": {
+          "named_faces": 1883,
+          "total_faces": 2398,
+          "embedding_requests": 363,
+          "disagreements_with_every_frame": 317
+        },
+        "improved_refresh_None": {
+          "named_faces": 2159,
+          "total_faces": 2398,
+          "embedding_requests": 2398,
+          "disagreements_with_every_frame": 0
+        },
+        "improved_refresh_1.0": {
+          "named_faces": 1846,
+          "total_faces": 2398,
+          "embedding_requests": 311,
+          "disagreements_with_every_frame": 397
+        },
+        "improved_refresh_0.5": {
+          "named_faces": 2002,
+          "total_faces": 2398,
+          "embedding_requests": 363,
+          "disagreements_with_every_frame": 263
+        }
+      }
+    },
+    {
+      "sequence": "P2L_S5_C2",
+      "frames": 1513,
+      "policies": {
+        "old_refresh_None": {
+          "named_faces": 1448,
+          "total_faces": 2319,
+          "embedding_requests": 2319,
+          "disagreements_with_every_frame": 0
+        },
+        "old_refresh_1.0": {
+          "named_faces": 1179,
+          "total_faces": 2319,
+          "embedding_requests": 262,
+          "disagreements_with_every_frame": 443
+        },
+        "old_refresh_0.5": {
+          "named_faces": 1332,
+          "total_faces": 2319,
+          "embedding_requests": 318,
+          "disagreements_with_every_frame": 282
+        },
+        "improved_refresh_None": {
+          "named_faces": 1748,
+          "total_faces": 2319,
+          "embedding_requests": 2319,
+          "disagreements_with_every_frame": 0
+        },
+        "improved_refresh_1.0": {
+          "named_faces": 1383,
+          "total_faces": 2319,
+          "embedding_requests": 262,
+          "disagreements_with_every_frame": 435
+        },
+        "improved_refresh_0.5": {
+          "named_faces": 1601,
+          "total_faces": 2319,
+          "embedding_requests": 318,
+          "disagreements_with_every_frame": 199
+        }
+      }
+    }
+  ]
+}

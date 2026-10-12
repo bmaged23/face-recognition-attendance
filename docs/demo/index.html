@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Face Recognition & Attendance — Video Demo</title>
+  <style>
+    :root { color-scheme: dark; font-family: system-ui, sans-serif; background: #0b1220; color: #e7edf7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 36px 20px; }
+    main { max-width: 1000px; margin: auto; }
+    .eyebrow { color: #64dec7; font-size: 12px; text-transform: uppercase; letter-spacing: .15em; }
+    h1 { font-size: clamp(25px, 4vw, 40px); margin: 12px 0; }
+    p { color: #abbad0; line-height: 1.65; }
+    .player { background: #121c2e; border: 1px solid #2b3c54; border-radius: 18px; overflow: hidden; margin-top: 25px; }
+    .toolbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; gap: 12px; }
+    #clip-label { font-weight: 650; }
+    button { border: 1px solid #486078; background: #1b2c43; color: #f2f6ff; padding: 9px 15px; border-radius: 9px; cursor: pointer; }
+    button:hover, button:focus-visible { background: #2b4866; }
+    video { width: 100%; display: block; background: #000; max-height: 70vh; }
+    #status { margin: 0; padding: 14px 20px; font-size: 14px; }
+    .sequence { display: flex; align-items: center; gap: 15px; flex-wrap: wrap; margin: 25px 0; }
+    .step { border: 1px solid #2b3c54; border-radius: 12px; padding: 12px 18px; }
+    .step.active { border-color: #64dec7; color: #64dec7; }
+    .arrow { color: #64dec7; }
+    details { border-top: 1px solid #2b3c54; padding-top: 18px; }
+    summary { cursor: pointer; font-size: 18px; }
+    .diagram { width: 100%; margin-top: 20px; border-radius: 12px; }
+    a { color: #64dec7; }
+    .note { font-size: 13px; }
+  </style>
+</head>
+<body>
+<main>
+  <div class="eyebrow">AdaFace · Multi-person recognition · Optional attendance</div>
+  <h1>Face Recognition & Attendance</h1>
+  <p>One enrolled photo per person. Every-frame face detection, periodic GPU recognition,
+     and explicit check-in or check-out records.</p>
+  <section class="player" aria-label="Annotated video playlist">
+    <div class="toolbar">
+      <span id="clip-label">Check-in · starts at 00:03</span>
+      <div><button id="next" type="button">Next clip</button> <button id="restart" type="button">Restart playlist</button></div>
+    </div>
+    <video id="demo-video" controls muted autoplay playsinline preload="auto" aria-label="Annotated ChokePoint demo">
+      Your browser does not support HTML video.
+    </video>
+    <p id="status" role="status" aria-live="polite">Loading check-in video…</p>
+  </section>
+  <div class="sequence" aria-label="Playlist order">
+    <span class="step active" id="step-0">1 · Check-in · 00:03 → end</span>
+    <span class="arrow" aria-hidden="true">→</span>
+    <span class="step" id="step-1">2 · Check-out · 00:28 → end</span>
+    <span class="arrow" aria-hidden="true">↻ Repeat</span>
+  </div>
+  <p class="note">These are prerecorded annotated results, not a live inference session.
+    Display names are aliases and attendance dates are synthetic. The ChokePoint source
+    dataset is for noncommercial research and personal experimentation.</p>
+  <details>
+    <summary>Explore the recognition and attendance pipeline</summary>
+    <img class="diagram" src="../media/pipeline.gif" alt="Animated enrollment, recognition, and optional attendance pipeline">
+    <p><a href="../media/pipeline.svg">Open the static, accessible diagram</a></p>
+  </details>
+</main>
+<script src="playlist.js"></script>
+</body>
+</html>

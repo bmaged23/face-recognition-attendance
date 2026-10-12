@@ -1,0 +1,10 @@
+MODIFIED DERIVATIVES OF THE NICTA CHOKEPOINT DATASET
+These MP4 files were generated from original camera-2 JPEG frames at 30 fps.
+Missing source frames repeat the previous frame. Audio is absent.
+Annotated outputs additionally contain automatic face boxes and test aliases.
+Original frames and archives are retained. Noncommercial experimentation only.
+Retain SOURCE_AND_LICENSE.html with copies and derivatives.
+Source: https://arma.sourceforge.net/chokepoint/
+NICTA; Y. Wong, S. Chen, S. Mau, C. Sanderson, B.C. Lovell,
+Patch-based Probabilistic Image Quality Assessment for Face Selection and
+Improved Video-based Face Recognition, CVPR Workshops, pp. 81-88, 2011.
