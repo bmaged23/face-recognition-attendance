@@ -4,6 +4,7 @@
 /.cache/
 /archive/
 /description/
+/linkedin/
 .env
 .env.*
 !.env.example
