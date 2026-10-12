@@ -13,31 +13,7 @@ it does not train a face recognition model.
 
 ![Looping check-in and check-out recognition demo](docs/media/attendance-demo.gif)
 
-**Check-in from 00:03 → Check-out from 00:28 → repeat.** The preview above
-plays automatically and repeats indefinitely without pressing Play, provided
-GitHub animation autoplay is enabled. Both clips are combined into one video,
-so the player does not need to load a second file between check-in and check-out.
-
-[Watch the full-quality looping video](https://bmaged23.github.io/face-recognition-attendance/docs/demo/)
-· [Download the combined MP4](https://github.com/bmaged23/face-recognition-attendance/raw/refs/heads/main/docs/media/attendance-demo.mp4)
-
-The full-quality player autoplays muted and repeats continuously. It has playback
-controls; if your browser blocks autoplay, press Play. GitHub README pages support
-the looping GIF preview, but do not execute an HTML video player with autoplay
-and loop controls. If GitHub shows a Play button on the preview, set
-**Settings → Accessibility → Motion → Autoplay animated images → Enabled**
-([GitHub documentation](https://docs.github.com/en/account-and-profile/how-tos/account-settings/managing-accessibility-settings)).
-A README cannot override a visitor’s motion preference. These are prerecorded
-results, not a live inference session.
-
-To view the same player locally after cloning:
-
-```sh
-python scripts/serve_demo.py
-```
-
-Open **http://localhost:8080/**. The combined demo and preview are included in
-Git; source datasets, original output files, and model checkpoints remain excluded.
+Multi-person face recognition with check-in and check-out annotations.
 
 ## Pipeline
 
