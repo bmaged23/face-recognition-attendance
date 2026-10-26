@@ -32,7 +32,7 @@ def main():
     # never silently reuse gallery entries or synthetic attendance from a prior run.
     data = args.output / 'container-data'
     data.mkdir(exist_ok=False)
-    command = ['docker','run','-d','--rm','--gpus','all','--name',name,
+    command = ['docker','run','-d','--gpus','all','--name',name,
                '-p','127.0.0.1::7323',
                '-v',f'{data}:/app/data', '-v',f'{args.fixtures.resolve()}:/fixtures:ro',
                '-v',f'{ROOT / "evaluation"}:/gate:ro', args.image]
@@ -74,7 +74,7 @@ def main():
         results['http_events'] = smoke['events']
         # Cold restart of the exact image and volume must preserve enrolled people.
         run('docker','stop',name)
-        run(*command)
+        run('docker','start',name)
         identity, person = smoke['enrolled_people'][0]
         test = f"""import json,time,httpx
 from pathlib import Path
@@ -104,6 +104,7 @@ print('Real HTTP recognition after persistent gallery restart passed')
         logs=subprocess.run(['docker','logs',name],capture_output=True,text=True)
         (args.output/'container.log').write_text(logs.stdout + logs.stderr)
         subprocess.run(['docker','stop',name],capture_output=True)
+        subprocess.run(['docker','rm',name],capture_output=True)
         (args.output/'gate-summary.json').write_text(json.dumps(results,indent=2)+'\n')
     print(json.dumps(results,indent=2))
 

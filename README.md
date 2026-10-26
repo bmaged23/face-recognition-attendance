@@ -13,6 +13,9 @@ search**, with one shared recognition pipeline for both entry points.
 
 Multi-person face recognition with check-in and check-out annotations.
 
+[Play the annotated video with controls](https://bmaged23.github.io/face-recognition-attendance/)
+(the looping GIF preview above is retained).
+
 ## Pipeline
 
 ![Animated enrollment, face recognition, and optional attendance pipeline](docs/media/pipeline.gif)

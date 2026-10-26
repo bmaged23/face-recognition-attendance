@@ -1,0 +1,31 @@
+{
+  "scope": "Native warmed batch-one stages from the matched 228-probe study; excludes startup/enrollment/video encoding. Embedding includes tensor preparation and transfer. Search is local in-memory Qdrant.",
+  "cpu": {
+    "detection": {
+      "executions": 228,
+      "median_ms": 95.39864399812359
+    },
+    "embedding": {
+      "executions": 169,
+      "median_ms": 1206.178454998735
+    },
+    "search": {
+      "executions": 169,
+      "median_ms": 0.7610450011270586
+    }
+  },
+  "cuda": {
+    "detection": {
+      "executions": 228,
+      "median_ms": 87.5811985006294
+    },
+    "embedding": {
+      "executions": 169,
+      "median_ms": 25.487463997706072
+    },
+    "search": {
+      "executions": 169,
+      "median_ms": 0.710243999492377
+    }
+  }
+}

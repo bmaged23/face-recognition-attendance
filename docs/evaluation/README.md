@@ -36,6 +36,22 @@ Zero errors on a small exposed set does not imply a zero population error rate:
 0/56 unknown false accepts has a Wilson 95% upper bound of about 6.4% if samples
 were independent; their correlation further limits that interpretation.
 
+## Component timing
+
+These medians include only calls that actually executed; a missed detection is
+not counted as a zero-time embedding/search operation.
+
+| Stage | Executions | CPU median | CUDA-run median |
+| --- | ---: | ---: | ---: |
+| MTCNN detection/alignment | 228 | 95.40 ms | 87.58 ms |
+| AdaFace embedding, preprocessing and transfer | 169 | 1,206.18 ms | 25.49 ms |
+| In-memory Qdrant search | 169 | 0.761 ms | 0.710 ms |
+
+Search runs on CPU in both configurations. These are stages of the same warmed
+batch-one workflow, not independent maximum-throughput benchmarks. The original
+per-probe reports also retain stage contributions for skipped calls as zero;
+[executed-call summary](measurements/component-summary.json) excludes those zeros.
+
 ## Compact checkpoint
 
 The original training checkpoint is 1,526,801,999 bytes. Exporting only its
