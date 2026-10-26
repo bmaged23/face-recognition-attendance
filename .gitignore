@@ -39,3 +39,7 @@ dist/
 /vendor/adaface/pretrained/
 
 # Documentation image assets are intentionally tracked.
+
+# Generated static site and local profiler/report artifacts
+/_site/
+/.ruff_cache/

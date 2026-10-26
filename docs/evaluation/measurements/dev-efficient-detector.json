@@ -1,0 +1,3184 @@
+{
+  "created_utc": "2026-10-26T18:28:25.031547+00:00",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce GTX 1660 Ti",
+  "torch": "2.5.1+cu124",
+  "threads": 2,
+  "fixture_sha256": "6e99cb5f4f28e15fb5450b5e2cd079187287ddda2d13c1b43447c117474cd08d",
+  "detector_policy": {
+    "final_threshold": 0.8,
+    "scale_factor": 0.707
+  },
+  "model_signature": "v1:adaface:ir_100_webface12m:native-alignment:bgr:0e7a3238d2a50f3fe3860782534928ac7cb2598977cf897f6869fd5ac2493fd0",
+  "model_startup_seconds": 5.736130105000484,
+  "confidence": 0.4,
+  "min_margin": 0.05,
+  "gallery": [
+    {
+      "identity": "0001",
+      "enrolled": true
+    },
+    {
+      "identity": "0002",
+      "enrolled": true
+    },
+    {
+      "identity": "0004",
+      "enrolled": true
+    },
+    {
+      "identity": "0005",
+      "enrolled": true
+    },
+    {
+      "identity": "0007",
+      "enrolled": true
+    },
+    {
+      "identity": "0010",
+      "enrolled": true
+    },
+    {
+      "identity": "0011",
+      "enrolled": true
+    },
+    {
+      "identity": "0013",
+      "enrolled": true
+    },
+    {
+      "identity": "0014",
+      "enrolled": true
+    },
+    {
+      "identity": "0016",
+      "enrolled": true
+    },
+    {
+      "identity": "0017",
+      "enrolled": true
+    },
+    {
+      "identity": "0019",
+      "enrolled": true
+    },
+    {
+      "identity": "0020",
+      "enrolled": true
+    },
+    {
+      "identity": "0022",
+      "enrolled": true
+    },
+    {
+      "identity": "0023",
+      "enrolled": true
+    },
+    {
+      "identity": "0025",
+      "enrolled": true
+    },
+    {
+      "identity": "0026",
+      "enrolled": true
+    },
+    {
+      "identity": "0028",
+      "enrolled": true
+    },
+    {
+      "identity": "0029",
+      "enrolled": true
+    }
+  ],
+  "overall": {
+    "probes": 116,
+    "known_probes": 76,
+    "unknown_probes": 40,
+    "detected_known": 60,
+    "detected_unknown": 26,
+    "correct_known_accepted": 60,
+    "wrong_known_accepted": 0,
+    "known_rejected_after_detection": 0,
+    "unknown_false_accepts": 0,
+    "known_end_to_end_correct_rate": 0.7894736842105263,
+    "known_correct_rate_given_detection": 1.0,
+    "unknown_false_accept_rate_given_detection": 0.0,
+    "latency_seconds": {
+      "median": 0.07349029650140437,
+      "p95": 0.10607171549963823,
+      "total": 8.420035608000035
+    },
+    "component_median_seconds": {
+      "detection_seconds": 0.049981404501522775,
+      "embedding_seconds": 0.023551702000986552,
+      "search_seconds": 0.0006943034986761631
+    }
+  },
+  "by_split": {
+    "development": {
+      "probes": 116,
+      "known_probes": 76,
+      "unknown_probes": 40,
+      "detected_known": 60,
+      "detected_unknown": 26,
+      "correct_known_accepted": 60,
+      "wrong_known_accepted": 0,
+      "known_rejected_after_detection": 0,
+      "unknown_false_accepts": 0,
+      "known_end_to_end_correct_rate": 0.7894736842105263,
+      "known_correct_rate_given_detection": 1.0,
+      "unknown_false_accept_rate_given_detection": 0.0,
+      "latency_seconds": {
+        "median": 0.07349029650140437,
+        "p95": 0.10607171549963823,
+        "total": 8.420035608000035
+      },
+      "component_median_seconds": {
+        "detection_seconds": 0.049981404501522775,
+        "embedding_seconds": 0.023551702000986552,
+        "search_seconds": 0.0006943034986761631
+      }
+    }
+  },
+  "samples": [
+    {
+      "identity": "0001",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002420.jpg",
+      "eyes": [
+        [
+          748.0,
+          185.0
+        ],
+        [
+          765.0,
+          187.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0001-00002420",
+      "known": true,
+      "split": "development",
+      "sha256": "9c8cfb58b43f30ccaaaf5605882b6d6e4ebab0340681be44d3e4498a51ff3db4",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05389182299768436,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.053895023000222864
+    },
+    {
+      "identity": "0001",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002443.jpg",
+      "eyes": [
+        [
+          552.0,
+          198.0
+        ],
+        [
+          576.0,
+          198.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0001-00002443",
+      "known": true,
+      "split": "development",
+      "sha256": "539774027c341bd8411006d0c368902e8044adf4b78000518d0ac4df9b126d20",
+      "detected": true,
+      "prediction": "0001",
+      "score": 0.6980984622464708,
+      "detection_seconds": 0.06333406499834382,
+      "embedding_seconds": 0.04994613799863146,
+      "search_seconds": 0.0014579679991584271,
+      "total_seconds": 0.11482097499902011
+    },
+    {
+      "identity": "0001",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002465.jpg",
+      "eyes": [
+        [
+          466.0,
+          235.0
+        ],
+        [
+          502.0,
+          237.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0001-00002465",
+      "known": true,
+      "split": "development",
+      "sha256": "7821d8aea82b0987922682379c79e8ede96fbbada5ab74a2e37fa753053d581f",
+      "detected": true,
+      "prediction": "0001",
+      "score": 0.7069271656246753,
+      "detection_seconds": 0.0673341520014219,
+      "embedding_seconds": 0.05010114499964402,
+      "search_seconds": 0.0007700360001763329,
+      "total_seconds": 0.11829513799966662
+    },
+    {
+      "identity": "0001",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002488.jpg",
+      "eyes": [
+        [
+          410.0,
+          455.0
+        ],
+        [
+          485.0,
+          454.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0001-00002488",
+      "known": true,
+      "split": "development",
+      "sha256": "fb5bfd7a07257d0f52e84547143f11fd19b78c20bedd48eed1c453bf51044894",
+      "detected": true,
+      "prediction": "0001",
+      "score": 0.785549389165657,
+      "detection_seconds": 0.06542656300007366,
+      "embedding_seconds": 0.04788514100073371,
+      "search_seconds": 0.0007202340020739939,
+      "total_seconds": 0.11409194099906017
+    },
+    {
+      "identity": "0002",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000808.jpg",
+      "eyes": [
+        [
+          523.0,
+          155.0
+        ],
+        [
+          539.0,
+          155.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0002-00000808",
+      "known": true,
+      "split": "development",
+      "sha256": "8a6a9f43c4eb961d08410166064c82ea26bd9b3d0844a57314cf99ef66e9a039",
+      "detected": true,
+      "prediction": "0002",
+      "score": 0.5176955168300619,
+      "detection_seconds": 0.05941288200119743,
+      "embedding_seconds": 0.047966445999918506,
+      "search_seconds": 0.0007119330002751667,
+      "total_seconds": 0.10815186300169444
+    },
+    {
+      "identity": "0002",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000828.jpg",
+      "eyes": [
+        [
+          432.0,
+          183.0
+        ],
+        [
+          455.0,
+          183.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0002-00000828",
+      "known": true,
+      "split": "development",
+      "sha256": "0d92197851b697548d8aea3c076f2104110e2ab76c843703dd4c81beee381ce4",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05315928900017752,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.05316438900263165
+    },
+    {
+      "identity": "0002",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000847.jpg",
+      "eyes": [
+        [
+          414.0,
+          226.0
+        ],
+        [
+          450.0,
+          225.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0002-00000847",
+      "known": true,
+      "split": "development",
+      "sha256": "b7829e1e8aca9640cea9c4f4bbf3f1b0c8b03b86e71ce02aae736ec06e92b09d",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04028388600272592,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04028648600069573
+    },
+    {
+      "identity": "0002",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000867.jpg",
+      "eyes": [
+        [
+          378.0,
+          449.0
+        ],
+        [
+          472.0,
+          449.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0002-00000867",
+      "known": true,
+      "split": "development",
+      "sha256": "8d6487b4ee547275d314a0ca8fb58d36c0ac6819c67b453cf3f10f283f2ed5ff",
+      "detected": true,
+      "prediction": "0002",
+      "score": 0.6328784675358599,
+      "detection_seconds": 0.05129200200099149,
+      "embedding_seconds": 0.02015044399740873,
+      "search_seconds": 0.001467467998736538,
+      "total_seconds": 0.07297431700135348
+    },
+    {
+      "identity": "0003",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000976.jpg",
+      "eyes": [
+        [
+          531.0,
+          164.0
+        ],
+        [
+          547.0,
+          165.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0003-00000976",
+      "known": false,
+      "split": "development",
+      "sha256": "f69ce8afe51da9b7b0a289295d1fb4a62cd0c9a75ef81f6688a58a681f12f29d",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.055000075000862125,
+      "embedding_seconds": 0.03179888900194783,
+      "search_seconds": 0.001982792997296201,
+      "total_seconds": 0.08885426000051666
+    },
+    {
+      "identity": "0003",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00001003.jpg",
+      "eyes": [
+        [
+          426.0,
+          199.0
+        ],
+        [
+          448.0,
+          200.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0003-00001003",
+      "known": false,
+      "split": "development",
+      "sha256": "9f7d42fd108a074507a0599f6f3479c89d6e1e220d553319ca5ff37d4021d558",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.06474103099753847,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.06474383099703118
+    },
+    {
+      "identity": "0003",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00001031.jpg",
+      "eyes": [
+        [
+          386.0,
+          266.0
+        ],
+        [
+          422.0,
+          266.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0003-00001031",
+      "known": false,
+      "split": "development",
+      "sha256": "5bb5b6db92a7b2aeab68829a9fa4cfd08be40cf7ac5e90645d7b9b7778d4558c",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04567473800125299,
+      "embedding_seconds": 0.019352605999301886,
+      "search_seconds": 0.0007336349990509916,
+      "total_seconds": 0.06582238099872484
+    },
+    {
+      "identity": "0003",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00001058.jpg",
+      "eyes": [
+        [
+          358.0,
+          481.0
+        ],
+        [
+          429.0,
+          483.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0003-00001058",
+      "known": false,
+      "split": "development",
+      "sha256": "8650fd4a2e7ab4703391d304f68180bb8126f9aee6322a36c4d07588094fab51",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05098548700334504,
+      "embedding_seconds": 0.019116694002150325,
+      "search_seconds": 0.0007266339998750482,
+      "total_seconds": 0.07088951900004758
+    },
+    {
+      "identity": "0004",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003921.jpg",
+      "eyes": [
+        [
+          710.0,
+          252.0
+        ],
+        [
+          726.0,
+          254.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0004-00003921",
+      "known": true,
+      "split": "development",
+      "sha256": "a7b2216a8951ffcba536a096bb5c95d9a6e80a6199ccaa94ce437f725d3d0da7",
+      "detected": true,
+      "prediction": "0004",
+      "score": 0.42025993811750306,
+      "detection_seconds": 0.08006374800243066,
+      "embedding_seconds": 0.03235061400118866,
+      "search_seconds": 0.0006975329997658264,
+      "total_seconds": 0.11321480000333395
+    },
+    {
+      "identity": "0004",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003936.jpg",
+      "eyes": [
+        [
+          576.0,
+          277.0
+        ],
+        [
+          599.0,
+          279.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0004-00003936",
+      "known": true,
+      "split": "development",
+      "sha256": "f158bce6700752a831cf3c258c0d5af4590d983aedea653df9a727aaa156f919",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04234128199823317,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04234398199696443
+    },
+    {
+      "identity": "0004",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003952.jpg",
+      "eyes": [
+        [
+          454.0,
+          351.0
+        ],
+        [
+          488.0,
+          349.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0004-00003952",
+      "known": true,
+      "split": "development",
+      "sha256": "118bd68cb97c222205a6866b6a89c9b6b1c0987c0a34e6d61301f5bfa91f4d08",
+      "detected": true,
+      "prediction": "0004",
+      "score": 0.6747211701398397,
+      "detection_seconds": 0.05901756200182717,
+      "embedding_seconds": 0.019441510001342976,
+      "search_seconds": 0.000693432997650234,
+      "total_seconds": 0.07921280799928354
+    },
+    {
+      "identity": "0004",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003967.jpg",
+      "eyes": [
+        [
+          399.0,
+          525.0
+        ],
+        [
+          455.0,
+          525.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0004-00003967",
+      "known": true,
+      "split": "development",
+      "sha256": "131ee6fde17015189974a12f7387c965b4c75964d6d36e23c48c22e1267e1403",
+      "detected": true,
+      "prediction": "0004",
+      "score": 0.6428947265722931,
+      "detection_seconds": 0.04622826400009217,
+      "embedding_seconds": 0.019640119000541745,
+      "search_seconds": 0.0013302619991009124,
+      "total_seconds": 0.06726194799921359
+    },
+    {
+      "identity": "0005",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003610.jpg",
+      "eyes": [
+        [
+          751.0,
+          181.0
+        ],
+        [
+          768.0,
+          182.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0005-00003610",
+      "known": true,
+      "split": "development",
+      "sha256": "e4b623cbdfb8d3e2b60e96bb4be62644634f74ee1b8d509791e26fc68513f37c",
+      "detected": true,
+      "prediction": "0005",
+      "score": 0.4938083369516954,
+      "detection_seconds": 0.05157571400195593,
+      "embedding_seconds": 0.020830574998399243,
+      "search_seconds": 0.0007629360006831121,
+      "total_seconds": 0.07322992799890926
+    },
+    {
+      "identity": "0005",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003634.jpg",
+      "eyes": [
+        [
+          574.0,
+          198.0
+        ],
+        [
+          599.0,
+          197.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0005-00003634",
+      "known": true,
+      "split": "development",
+      "sha256": "07e1f77d4172433ba3458df7f24e20b113fcbb1786d31f3d3959d640d06ee07e",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04084161200080416,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04084531199987396
+    },
+    {
+      "identity": "0005",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003659.jpg",
+      "eyes": [
+        [
+          465.0,
+          244.0
+        ],
+        [
+          501.0,
+          244.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0005-00003659",
+      "known": true,
+      "split": "development",
+      "sha256": "01c099f4253d09e3b536919aeba4d3bc4f559d0107ed9e048d2a69d4cd5528d7",
+      "detected": true,
+      "prediction": "0005",
+      "score": 0.6486152089258972,
+      "detection_seconds": 0.05950018499788712,
+      "embedding_seconds": 0.02736438099964289,
+      "search_seconds": 0.0007343339966610074,
+      "total_seconds": 0.08768070399673888
+    },
+    {
+      "identity": "0005",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003683.jpg",
+      "eyes": [
+        [
+          352.0,
+          445.0
+        ],
+        [
+          439.0,
+          431.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0005-00003683",
+      "known": true,
+      "split": "development",
+      "sha256": "acd4be894c5bfe6862a54200d2acbc6f4c953f0a3801289a0562bc50fdeaa137",
+      "detected": true,
+      "prediction": "0005",
+      "score": 0.7808016007939602,
+      "detection_seconds": 0.07511091599735664,
+      "embedding_seconds": 0.037777968998852884,
+      "search_seconds": 0.0008459390010102652,
+      "total_seconds": 0.11384542899759253
+    },
+    {
+      "identity": "0006",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002239.jpg",
+      "eyes": [
+        [
+          744.0,
+          174.0
+        ],
+        [
+          762.0,
+          178.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0006-00002239",
+      "known": false,
+      "split": "development",
+      "sha256": "d87c7a5ef62b52e5023896eec84732496d7277560e3100e9a6f401de03a01d79",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.052965378999942914,
+      "embedding_seconds": 0.019546415001968853,
+      "search_seconds": 0.000692632998834597,
+      "total_seconds": 0.07329093099906459
+    },
+    {
+      "identity": "0006",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002262.jpg",
+      "eyes": [
+        [
+          578.0,
+          194.0
+        ],
+        [
+          605.0,
+          196.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0006-00002262",
+      "known": false,
+      "split": "development",
+      "sha256": "ddf54476b74a7f345ac372eb54cdca20940b456debe473194ddb7b6c341c1020",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04679788999783341,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.046801090000371914
+    },
+    {
+      "identity": "0006",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002286.jpg",
+      "eyes": [
+        [
+          451.0,
+          245.0
+        ],
+        [
+          492.0,
+          246.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0006-00002286",
+      "known": false,
+      "split": "development",
+      "sha256": "c9b6a68ffe55661ffcd78358154a46098f5d56c5c99a04d2294c35c27a80960e",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04935811099858256,
+      "embedding_seconds": 0.019178496997483307,
+      "search_seconds": 0.0007086339974193834,
+      "total_seconds": 0.06930744499913999
+    },
+    {
+      "identity": "0006",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002309.jpg",
+      "eyes": [
+        [
+          430.0,
+          434.0
+        ],
+        [
+          521.0,
+          441.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0006-00002309",
+      "known": false,
+      "split": "development",
+      "sha256": "286fadcb7b71e77b3f7de3cff2e974b066bdac8ad4fa2294a4a7225b6cc38086",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05963529200016637,
+      "embedding_seconds": 0.02623682799821836,
+      "search_seconds": 0.0006655309989582747,
+      "total_seconds": 0.08663895600329852
+    },
+    {
+      "identity": "0007",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000900.jpg",
+      "eyes": [
+        [
+          746.0,
+          176.0
+        ],
+        [
+          763.0,
+          176.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0007-00000900",
+      "known": true,
+      "split": "development",
+      "sha256": "3120fac51e1f5fa6f49c6914752be0f0500eca886cc48d03c53a61185eb84818",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04440667900053086,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.044409779002307914
+    },
+    {
+      "identity": "0007",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000926.jpg",
+      "eyes": [
+        [
+          539.0,
+          178.0
+        ],
+        [
+          561.0,
+          181.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0007-00000926",
+      "known": true,
+      "split": "development",
+      "sha256": "f85955b4bcb46135990a08d616705d9a5c47d5608f236be74453b1192f22b67f",
+      "detected": true,
+      "prediction": "0007",
+      "score": 0.5974006949615425,
+      "detection_seconds": 0.047427920002519386,
+      "embedding_seconds": 0.0192874029999075,
+      "search_seconds": 0.0006787320016883314,
+      "total_seconds": 0.0674778590000642
+    },
+    {
+      "identity": "0007",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000952.jpg",
+      "eyes": [
+        [
+          410.0,
+          240.0
+        ],
+        [
+          446.0,
+          240.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0007-00000952",
+      "known": true,
+      "split": "development",
+      "sha256": "fa330de4c7c1e3539543ecec87364252852bf6ba9f5b21d92d107ee2379a8690",
+      "detected": true,
+      "prediction": "0007",
+      "score": 0.6438592256302862,
+      "detection_seconds": 0.05015924899998936,
+      "embedding_seconds": 0.020911779000016395,
+      "search_seconds": 0.0008316390012623742,
+      "total_seconds": 0.07196686900351779
+    },
+    {
+      "identity": "0007",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000978.jpg",
+      "eyes": [
+        [
+          355.0,
+          444.0
+        ],
+        [
+          448.0,
+          445.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0007-00000978",
+      "known": true,
+      "split": "development",
+      "sha256": "b577de4559019f4b1d3a172def134c1ffbca87c4354f22277e833855c6d174d9",
+      "detected": true,
+      "prediction": "0007",
+      "score": 0.7794624620160974,
+      "detection_seconds": 0.0732984319984098,
+      "embedding_seconds": 0.024797860998660326,
+      "search_seconds": 0.0006810320010117721,
+      "total_seconds": 0.09887902899936307
+    },
+    {
+      "identity": "0009",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003187.jpg",
+      "eyes": [
+        [
+          742.0,
+          242.0
+        ],
+        [
+          759.0,
+          245.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0009-00003187",
+      "known": false,
+      "split": "development",
+      "sha256": "404e630b6b7bac54f453e0b6968168ecef431b482364bbf27fd05a6d5a91cce6",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04452498500177171,
+      "embedding_seconds": 0.02365410800121026,
+      "search_seconds": 0.0007186329967225902,
+      "total_seconds": 0.06896172800043132
+    },
+    {
+      "identity": "0009",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003204.jpg",
+      "eyes": [
+        [
+          572.0,
+          259.0
+        ],
+        [
+          597.0,
+          260.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0009-00003204",
+      "known": false,
+      "split": "development",
+      "sha256": "d69d4748d59c554983a8dfce64ab4e86e8236fe72dcaab18aad8ad878b7d7463",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04929290800282615,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04929620800248813
+    },
+    {
+      "identity": "0009",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003222.jpg",
+      "eyes": [
+        [
+          448.0,
+          334.0
+        ],
+        [
+          483.0,
+          335.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0009-00003222",
+      "known": false,
+      "split": "development",
+      "sha256": "499b1ff6056565e86ed5d9094731e28b35e9db186fdbbb8a68368811700f788f",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04858937399694696,
+      "embedding_seconds": 0.021861823999643093,
+      "search_seconds": 0.0006697309981973376,
+      "total_seconds": 0.07118143199841143
+    },
+    {
+      "identity": "0009",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003239.jpg",
+      "eyes": [
+        [
+          336.0,
+          514.0
+        ],
+        [
+          393.0,
+          512.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0009-00003239",
+      "known": false,
+      "split": "development",
+      "sha256": "21d9b670ff92a6047f168588005771deaf879e10e75085b5fa17eb69adaa6fc7",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04807125099978293,
+      "embedding_seconds": 0.0218275219995121,
+      "search_seconds": 0.0006721319987263996,
+      "total_seconds": 0.07062920699900133
+    },
+    {
+      "identity": "0010",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001759.jpg",
+      "eyes": [
+        [
+          739.0,
+          179.0
+        ],
+        [
+          757.0,
+          182.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0010-00001759",
+      "known": true,
+      "split": "development",
+      "sha256": "1fa71b9d9eea472b255f7200fa3a23914cc813d764a0481ea6b3a21b2165aea8",
+      "detected": true,
+      "prediction": "0010",
+      "score": 0.6085829457625369,
+      "detection_seconds": 0.051985733000037726,
+      "embedding_seconds": 0.034442012998624705,
+      "search_seconds": 0.0017970840017369483,
+      "total_seconds": 0.08828993299903232
+    },
+    {
+      "identity": "0010",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001782.jpg",
+      "eyes": [
+        [
+          564.0,
+          174.0
+        ],
+        [
+          586.0,
+          177.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0010-00001782",
+      "known": true,
+      "split": "development",
+      "sha256": "c90abc6eeee1c6d787612b5d6337f9d5b004a5708226b09d68cbc5fb73871636",
+      "detected": true,
+      "prediction": "0010",
+      "score": 0.6387853011884326,
+      "detection_seconds": 0.08246636100011528,
+      "embedding_seconds": 0.022173738001583843,
+      "search_seconds": 0.0006769309984520078,
+      "total_seconds": 0.10537833299895283
+    },
+    {
+      "identity": "0010",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001804.jpg",
+      "eyes": [
+        [
+          434.0,
+          221.0
+        ],
+        [
+          468.0,
+          223.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0010-00001804",
+      "known": true,
+      "split": "development",
+      "sha256": "bbdfef9e444eefdc22101dcbcf975267d20549df58ef72b3253ec08751319398",
+      "detected": true,
+      "prediction": "0010",
+      "score": 0.6428457452513018,
+      "detection_seconds": 0.047059303000423824,
+      "embedding_seconds": 0.022971075002715224,
+      "search_seconds": 0.0006731309986207634,
+      "total_seconds": 0.07076381300066714
+    },
+    {
+      "identity": "0010",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001827.jpg",
+      "eyes": [
+        [
+          397.0,
+          462.0
+        ],
+        [
+          473.0,
+          459.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0010-00001827",
+      "known": true,
+      "split": "development",
+      "sha256": "40579325fb4844b76120af70aaddd11e35d4573a342bd365c64d7b8db4eff4d5",
+      "detected": true,
+      "prediction": "0010",
+      "score": 0.6175418910153948,
+      "detection_seconds": 0.05177512400041451,
+      "embedding_seconds": 0.02285036900138948,
+      "search_seconds": 0.0007235339980979916,
+      "total_seconds": 0.07542973100134986
+    },
+    {
+      "identity": "0011",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002059.jpg",
+      "eyes": [
+        [
+          752.0,
+          154.0
+        ],
+        [
+          768.0,
+          154.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0011-00002059",
+      "known": true,
+      "split": "development",
+      "sha256": "8d481b5e3fbd60e154be4a16f7784f4f43b564ef42dc504e2907b4fcece0d1f8",
+      "detected": true,
+      "prediction": "0011",
+      "score": 0.4735286287429811,
+      "detection_seconds": 0.052863475000776816,
+      "embedding_seconds": 0.022770565999962855,
+      "search_seconds": 0.0008668400005262811,
+      "total_seconds": 0.07656078400032129
+    },
+    {
+      "identity": "0011",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002084.jpg",
+      "eyes": [
+        [
+          545.0,
+          171.0
+        ],
+        [
+          567.0,
+          170.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0011-00002084",
+      "known": true,
+      "split": "development",
+      "sha256": "3773bc56f5b0d6d160103854132e2ae9433ad7d4ff0f0829723dfec498450ec6",
+      "detected": true,
+      "prediction": "0011",
+      "score": 0.5169095748091186,
+      "detection_seconds": 0.05058936900240951,
+      "embedding_seconds": 0.023714611001196317,
+      "search_seconds": 0.0006877320010971744,
+      "total_seconds": 0.07507651500054635
+    },
+    {
+      "identity": "0011",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002110.jpg",
+      "eyes": [
+        [
+          430.0,
+          205.0
+        ],
+        [
+          465.0,
+          205.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0011-00002110",
+      "known": true,
+      "split": "development",
+      "sha256": "265ce9457122c148f7c93c841dd5a326757cb88c38cb48dac4d271834624b303",
+      "detected": true,
+      "prediction": "0011",
+      "score": 0.564585589008124,
+      "detection_seconds": 0.05742488800024148,
+      "embedding_seconds": 0.0230520789991715,
+      "search_seconds": 0.0007029330008663237,
+      "total_seconds": 0.08124210299865808
+    },
+    {
+      "identity": "0011",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002135.jpg",
+      "eyes": [
+        [
+          386.0,
+          442.0
+        ],
+        [
+          475.0,
+          448.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0011-00002135",
+      "known": true,
+      "split": "development",
+      "sha256": "f8d7a9f4e17235043efcf45f51615bb233e92edcc78af43efa783d739fa2ba37",
+      "detected": true,
+      "prediction": "0011",
+      "score": 0.5727953301085484,
+      "detection_seconds": 0.05296897899825126,
+      "embedding_seconds": 0.02418243200008874,
+      "search_seconds": 0.001795684001990594,
+      "total_seconds": 0.07900779799820157
+    },
+    {
+      "identity": "0012",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003346.jpg",
+      "eyes": [
+        [
+          738.0,
+          251.0
+        ],
+        [
+          757.0,
+          254.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0012-00003346",
+      "known": false,
+      "split": "development",
+      "sha256": "79d42f6eb42d340526a667048def6acf9c67c05402beeea1ff6047b14fc57e6a",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05731588300113799,
+      "embedding_seconds": 0.023216485999000724,
+      "search_seconds": 0.0008487400009471457,
+      "total_seconds": 0.08144241199988755
+    },
+    {
+      "identity": "0012",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003361.jpg",
+      "eyes": [
+        [
+          622.0,
+          283.0
+        ],
+        [
+          648.0,
+          285.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0012-00003361",
+      "known": false,
+      "split": "development",
+      "sha256": "e47dedd2027c6631d01dafd63b86a4c6e82bcd4fc63a08135d486ac6db8d3d98",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.053495203999773366,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.05349800499971025
+    },
+    {
+      "identity": "0012",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003376.jpg",
+      "eyes": [
+        [
+          547.0,
+          352.0
+        ],
+        [
+          583.0,
+          354.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0012-00003376",
+      "known": false,
+      "split": "development",
+      "sha256": "53cfe392bce4678d6f31cebd6e2cd65275e0a9da874d7e3cfa823e5b43a2d1aa",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05348980400231085,
+      "embedding_seconds": 0.023722010002529714,
+      "search_seconds": 0.0007031329987512436,
+      "total_seconds": 0.07797655000103987
+    },
+    {
+      "identity": "0012",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003391.jpg",
+      "eyes": [
+        [
+          476.0,
+          512.0
+        ],
+        [
+          530.0,
+          514.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0012-00003391",
+      "known": false,
+      "split": "development",
+      "sha256": "396fb56a5f5e61cded2ae4a757d5c1727221a0b59af32a822b1f3f136a991c6a",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05032525599744986,
+      "embedding_seconds": 0.02405342600104632,
+      "search_seconds": 0.0006618309998884797,
+      "total_seconds": 0.07510281599752489
+    },
+    {
+      "identity": "0013",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000191.jpg",
+      "eyes": [
+        [
+          750.0,
+          181.0
+        ],
+        [
+          767.0,
+          182.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0013-00000191",
+      "known": true,
+      "split": "development",
+      "sha256": "9fa985c9f2a695afc3590d0a71cf2d4abd92c88ffb74bb1dcf9462d2a94ce4a6",
+      "detected": true,
+      "prediction": "0013",
+      "score": 0.43941242363166594,
+      "detection_seconds": 0.07403636600065511,
+      "embedding_seconds": 0.023796514000423485,
+      "search_seconds": 0.0006814320004195906,
+      "total_seconds": 0.09857961500165402
+    },
+    {
+      "identity": "0013",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000224.jpg",
+      "eyes": [
+        [
+          506.0,
+          186.0
+        ],
+        [
+          529.0,
+          187.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0013-00000224",
+      "known": true,
+      "split": "development",
+      "sha256": "186b57f17f4fd5e9ce27bfb3e95515b4498c390cdddb26a5d2a84dafa76f745b",
+      "detected": true,
+      "prediction": "0013",
+      "score": 0.6466061448763232,
+      "detection_seconds": 0.04708330399807892,
+      "embedding_seconds": 0.02356970300024841,
+      "search_seconds": 0.0006758320014341734,
+      "total_seconds": 0.07138764199771686
+    },
+    {
+      "identity": "0013",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000256.jpg",
+      "eyes": [
+        [
+          425.0,
+          225.0
+        ],
+        [
+          459.0,
+          227.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0013-00000256",
+      "known": true,
+      "split": "development",
+      "sha256": "199563342bfd562b53b1627d23995796200fc6b10fab4db67251987dc6cc4a1e",
+      "detected": true,
+      "prediction": "0013",
+      "score": 0.7116530873955972,
+      "detection_seconds": 0.05071757400219212,
+      "embedding_seconds": 0.02365880700017442,
+      "search_seconds": 0.0008146379987010732,
+      "total_seconds": 0.07527682300133165
+    },
+    {
+      "identity": "0013",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000289.jpg",
+      "eyes": [
+        [
+          393.0,
+          462.0
+        ],
+        [
+          484.0,
+          468.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0013-00000289",
+      "known": true,
+      "split": "development",
+      "sha256": "3868d5c17c95a8d98f50e1753155cdb57f398559fcb11aaa2983d1dafd1aed6b",
+      "detected": true,
+      "prediction": "0013",
+      "score": 0.7234484423845002,
+      "detection_seconds": 0.055314788998657605,
+      "embedding_seconds": 0.025007871001434978,
+      "search_seconds": 0.0008627399984106887,
+      "total_seconds": 0.08125100299730548
+    },
+    {
+      "identity": "0014",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000407.jpg",
+      "eyes": [
+        [
+          749.0,
+          161.0
+        ],
+        [
+          766.0,
+          161.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0014-00000407",
+      "known": true,
+      "split": "development",
+      "sha256": "5d04b7d5063c8896c5134943562454c17d354d9414552e3215e9be08176f7eb7",
+      "detected": true,
+      "prediction": "0014",
+      "score": 0.4261790783867626,
+      "detection_seconds": 0.07778024099752656,
+      "embedding_seconds": 0.0234754979974241,
+      "search_seconds": 0.000687632000335725,
+      "total_seconds": 0.10201457599760033
+    },
+    {
+      "identity": "0014",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000430.jpg",
+      "eyes": [
+        [
+          546.0,
+          171.0
+        ],
+        [
+          573.0,
+          171.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0014-00000430",
+      "known": true,
+      "split": "development",
+      "sha256": "669232ae6723152fec3ee5eb0784b2f80a2b8a5c9d4cf6da1e4656adf9cfd378",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.0428644070016162,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04286750699975528
+    },
+    {
+      "identity": "0014",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000452.jpg",
+      "eyes": [
+        [
+          415.0,
+          216.0
+        ],
+        [
+          455.0,
+          211.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0014-00000452",
+      "known": true,
+      "split": "development",
+      "sha256": "de2609f9f800756e1472bf79734aa765b587ab1cdc2c899cff0f9f1e228365cd",
+      "detected": true,
+      "prediction": "0014",
+      "score": 0.6780014266736629,
+      "detection_seconds": 0.05261936300303205,
+      "embedding_seconds": 0.0271435710019432,
+      "search_seconds": 0.002065496999421157,
+      "total_seconds": 0.08189823400243768
+    },
+    {
+      "identity": "0014",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000475.jpg",
+      "eyes": [
+        [
+          377.0,
+          414.0
+        ],
+        [
+          491.0,
+          412.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0014-00000475",
+      "known": true,
+      "split": "development",
+      "sha256": "5b912ab3bc15cb2f36b3706e0b90c6dbcd6ef7729fcfee9f4844a0b8be3ee9fd",
+      "detected": true,
+      "prediction": "0014",
+      "score": 0.6567113466005403,
+      "detection_seconds": 0.05944078299944522,
+      "embedding_seconds": 0.023838916000386234,
+      "search_seconds": 0.0007715359970461577,
+      "total_seconds": 0.0841183379998256
+    },
+    {
+      "identity": "0015",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000404.jpg",
+      "eyes": [
+        [
+          537.0,
+          142.0
+        ],
+        [
+          553.0,
+          142.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0015-00000404",
+      "known": false,
+      "split": "development",
+      "sha256": "5ce07ae76e23707c3953b66e49731106856e64815bb9bf31aa7a1a7fdeedce1b",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.052940579000278376,
+      "embedding_seconds": 0.023533701001724694,
+      "search_seconds": 0.0008013380029296968,
+      "total_seconds": 0.07734282099772827
+    },
+    {
+      "identity": "0015",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000429.jpg",
+      "eyes": [
+        [
+          455.0,
+          158.0
+        ],
+        [
+          475.0,
+          158.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0015-00000429",
+      "known": false,
+      "split": "development",
+      "sha256": "332beec15e46897ab6f714a0f9a7812a6abb6baafd0bcd0fa21fe9e343184220",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05050926400144817,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.0505126640018716
+    },
+    {
+      "identity": "0015",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000454.jpg",
+      "eyes": [
+        [
+          434.0,
+          222.0
+        ],
+        [
+          467.0,
+          222.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0015-00000454",
+      "known": false,
+      "split": "development",
+      "sha256": "9bd05ea45af23ffbd9c8a757f267f39c6ddab7013348e13113804b93b585e35a",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05223104499964393,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.052234344999305904
+    },
+    {
+      "identity": "0015",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000479.jpg",
+      "eyes": [
+        [
+          420.0,
+          432.0
+        ],
+        [
+          507.0,
+          423.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0015-00000479",
+      "known": false,
+      "split": "development",
+      "sha256": "71b2eb6e944b21fc0c19898564e5681501cdea0244488b28da0c93bd2359a07d",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05685556200114661,
+      "embedding_seconds": 0.027775201000622474,
+      "search_seconds": 0.0019531910002115183,
+      "total_seconds": 0.0866500560005079
+    },
+    {
+      "identity": "0016",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002887.jpg",
+      "eyes": [
+        [
+          740.0,
+          243.0
+        ],
+        [
+          756.0,
+          244.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0016-00002887",
+      "known": true,
+      "split": "development",
+      "sha256": "79cb5b178e553d5c3cfd7d7b4443ffa1f85ed347ff3a3f6ce25d2f0e6daf1d88",
+      "detected": true,
+      "prediction": "0016",
+      "score": 0.577624635667904,
+      "detection_seconds": 0.057827407003060216,
+      "embedding_seconds": 0.027053067002270836,
+      "search_seconds": 0.000755434997699922,
+      "total_seconds": 0.08571841299999505
+    },
+    {
+      "identity": "0016",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002905.jpg",
+      "eyes": [
+        [
+          583.0,
+          266.0
+        ],
+        [
+          605.0,
+          268.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0016-00002905",
+      "known": true,
+      "split": "development",
+      "sha256": "8a62091f2d14390e1660346985194193a20b5988b4a21a346328ba86b4d4e7e1",
+      "detected": true,
+      "prediction": "0016",
+      "score": 0.6745113037933783,
+      "detection_seconds": 0.06637060700086295,
+      "embedding_seconds": 0.0282393220004451,
+      "search_seconds": 0.0017827839983510785,
+      "total_seconds": 0.096464416001254
+    },
+    {
+      "identity": "0016",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002923.jpg",
+      "eyes": [
+        [
+          491.0,
+          328.0
+        ],
+        [
+          521.0,
+          329.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0016-00002923",
+      "known": true,
+      "split": "development",
+      "sha256": "2e09cd541e0e25e00857245ea6936c5ef62555272e2014ad35c8a60ef8dc57ab",
+      "detected": true,
+      "prediction": "0016",
+      "score": 0.681004492324138,
+      "detection_seconds": 0.07388165900192689,
+      "embedding_seconds": 0.023761512002238305,
+      "search_seconds": 0.0007700360001763329,
+      "total_seconds": 0.09850411099978373
+    },
+    {
+      "identity": "0016",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002941.jpg",
+      "eyes": [
+        [
+          403.0,
+          528.0
+        ],
+        [
+          455.0,
+          528.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0016-00002941",
+      "known": true,
+      "split": "development",
+      "sha256": "3a12a973ae4ef6bded762745930d5a34d4eedaa33594d9b26c47086b7c1f1f03",
+      "detected": true,
+      "prediction": "0016",
+      "score": 0.7754012649222288,
+      "detection_seconds": 0.04795534499862697,
+      "embedding_seconds": 0.023203786000522086,
+      "search_seconds": 0.0006946319990674965,
+      "total_seconds": 0.07191416600107914
+    },
+    {
+      "identity": "0017",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003026.jpg",
+      "eyes": [
+        [
+          744.0,
+          200.0
+        ],
+        [
+          761.0,
+          203.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0017-00003026",
+      "known": true,
+      "split": "development",
+      "sha256": "66af5ccd9345f830d19a9e27b6259974a3e9139897ef53f6d6e62d9bc0fc2929",
+      "detected": true,
+      "prediction": "0017",
+      "score": 0.5143717751274658,
+      "detection_seconds": 0.047981145999074215,
+      "embedding_seconds": 0.023244488002092112,
+      "search_seconds": 0.0008492399974784348,
+      "total_seconds": 0.07215157699829433
+    },
+    {
+      "identity": "0017",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003047.jpg",
+      "eyes": [
+        [
+          566.0,
+          217.0
+        ],
+        [
+          588.0,
+          220.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0017-00003047",
+      "known": true,
+      "split": "development",
+      "sha256": "94cd5e9f06db3ada3164def73fa213ceab8531628a8f08fcc688a3276093f372",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04920580299949506,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04920870400019339
+    },
+    {
+      "identity": "0017",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003068.jpg",
+      "eyes": [
+        [
+          441.0,
+          266.0
+        ],
+        [
+          477.0,
+          266.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0017-00003068",
+      "known": true,
+      "split": "development",
+      "sha256": "1acc4ad2a11d67c2aa96c27e1c12aceb90dfe723bc02212b4c4daa707f6d1083",
+      "detected": true,
+      "prediction": "0017",
+      "score": 0.7412345741430879,
+      "detection_seconds": 0.04925680599990301,
+      "embedding_seconds": 0.023301090997847496,
+      "search_seconds": 0.0007983379982761107,
+      "total_seconds": 0.07341583699962939
+    },
+    {
+      "identity": "0017",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003089.jpg",
+      "eyes": [
+        [
+          370.0,
+          480.0
+        ],
+        [
+          441.0,
+          478.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0017-00003089",
+      "known": true,
+      "split": "development",
+      "sha256": "35b31adbc19d94e8f199a4df48c86fcbb5cc43f0e03c16d50aa9c9acbfb5e6c6",
+      "detected": true,
+      "prediction": "0017",
+      "score": 0.7234039602951703,
+      "detection_seconds": 0.05210843899840256,
+      "embedding_seconds": 0.023317191000387538,
+      "search_seconds": 0.000714632999006426,
+      "total_seconds": 0.07620566699915798
+    },
+    {
+      "identity": "0018",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001070.jpg",
+      "eyes": [
+        [
+          737.0,
+          183.0
+        ],
+        [
+          753.0,
+          183.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0018-00001070",
+      "known": false,
+      "split": "development",
+      "sha256": "58e0202bbadc4ab157809f4207645dd938b982bb6fe86dda5830fb66503a7718",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04898399300145684,
+      "embedding_seconds": 0.023181685999588808,
+      "search_seconds": 0.0009421440008736681,
+      "total_seconds": 0.0731668250009534
+    },
+    {
+      "identity": "0018",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001092.jpg",
+      "eyes": [
+        [
+          550.0,
+          191.0
+        ],
+        [
+          572.0,
+          191.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0018-00001092",
+      "known": false,
+      "split": "development",
+      "sha256": "d215e6283b39a384e65c4c56149aac2d94710ceb85cce85b6934c15e72be9120",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.045643736000783974,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.045646737002243754
+    },
+    {
+      "identity": "0018",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001113.jpg",
+      "eyes": [
+        [
+          413.0,
+          252.0
+        ],
+        [
+          447.0,
+          252.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0018-00001113",
+      "known": false,
+      "split": "development",
+      "sha256": "503e573f4db23bbed932984307c34cf4e25764a2b471e8e10d4f94e8d3e248c6",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04773197299800813,
+      "embedding_seconds": 0.023393041999952402,
+      "search_seconds": 0.0007100770017132163,
+      "total_seconds": 0.07189849999849685
+    },
+    {
+      "identity": "0018",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001135.jpg",
+      "eyes": [
+        [
+          347.0,
+          455.0
+        ],
+        [
+          416.0,
+          451.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0018-00001135",
+      "known": false,
+      "split": "development",
+      "sha256": "bec7f4cbf0f2c1ecce7d18ef8f87e53aebfd28a1cede676f9f376dce795095a0",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04050660299981246,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04051010300099733
+    },
+    {
+      "identity": "0019",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003483.jpg",
+      "eyes": [
+        [
+          743.0,
+          206.0
+        ],
+        [
+          759.0,
+          207.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0019-00003483",
+      "known": true,
+      "split": "development",
+      "sha256": "0529916253b84538b70a088e85db70d04a4a0cede5d32b281f4e810d4ae67314",
+      "detected": true,
+      "prediction": "0019",
+      "score": 0.592590683141323,
+      "detection_seconds": 0.04700490899995202,
+      "embedding_seconds": 0.023224024000228383,
+      "search_seconds": 0.0007230789997265674,
+      "total_seconds": 0.07101211799817975
+    },
+    {
+      "identity": "0019",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003505.jpg",
+      "eyes": [
+        [
+          535.0,
+          213.0
+        ],
+        [
+          561.0,
+          213.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0019-00003505",
+      "known": true,
+      "split": "development",
+      "sha256": "f0859443597412e694119d55179b83b645abe970318c64eb2409a821423ee4ef",
+      "detected": true,
+      "prediction": "0019",
+      "score": 0.6768638705895585,
+      "detection_seconds": 0.046988006997708,
+      "embedding_seconds": 0.023240826001710957,
+      "search_seconds": 0.0006774729990866035,
+      "total_seconds": 0.07096711299891467
+    },
+    {
+      "identity": "0019",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003528.jpg",
+      "eyes": [
+        [
+          448.0,
+          269.0
+        ],
+        [
+          484.0,
+          268.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0019-00003528",
+      "known": true,
+      "split": "development",
+      "sha256": "0d86d3477f5269548a4ac9a5f80c4c4e427c324a2b8cb41e8c1aa5c2cc6709c1",
+      "detected": true,
+      "prediction": "0019",
+      "score": 0.7513901096313637,
+      "detection_seconds": 0.05379312900186051,
+      "embedding_seconds": 0.02582179199816892,
+      "search_seconds": 0.0006712730028084479,
+      "total_seconds": 0.08035190100054024
+    },
+    {
+      "identity": "0019",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003550.jpg",
+      "eyes": [
+        [
+          437.0,
+          497.0
+        ],
+        [
+          504.0,
+          497.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0019-00003550",
+      "known": true,
+      "split": "development",
+      "sha256": "d2351f0b700a62fd110f6aa33eef0d3376ae19e405f1a19c245d1c53d757b201",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.042371080999146216,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.042373981999844545
+    },
+    {
+      "identity": "0020",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001916.jpg",
+      "eyes": [
+        [
+          748.0,
+          182.0
+        ],
+        [
+          767.0,
+          182.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0020-00001916",
+      "known": true,
+      "split": "development",
+      "sha256": "7e5786bbf305057c0953d55ad2f65c3cee25ef57d55b87ff3207b3078488224c",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04257280399906449,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04257550400143373
+    },
+    {
+      "identity": "0020",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001934.jpg",
+      "eyes": [
+        [
+          590.0,
+          201.0
+        ],
+        [
+          612.0,
+          201.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0020-00001934",
+      "known": true,
+      "split": "development",
+      "sha256": "03f30d7ebd7658f58b522c9bc532cfa97db10260eec317e26a2f8bd54b7d4cbf",
+      "detected": true,
+      "prediction": "0020",
+      "score": 0.7062125450956817,
+      "detection_seconds": 0.05239636599799269,
+      "embedding_seconds": 0.02643825900304364,
+      "search_seconds": 0.0007624819991178811,
+      "total_seconds": 0.07965531399895553
+    },
+    {
+      "identity": "0020",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001953.jpg",
+      "eyes": [
+        [
+          479.0,
+          270.0
+        ],
+        [
+          515.0,
+          269.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0020-00001953",
+      "known": true,
+      "split": "development",
+      "sha256": "118b0897bbb6f60648d87b2533b54c25fdcefeea3320f06db110d073a9887ebc",
+      "detected": true,
+      "prediction": "0020",
+      "score": 0.7336400777926104,
+      "detection_seconds": 0.04611078599918983,
+      "embedding_seconds": 0.026649781997548416,
+      "search_seconds": 0.0006939749982848298,
+      "total_seconds": 0.0735148490020947
+    },
+    {
+      "identity": "0020",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001971.jpg",
+      "eyes": [
+        [
+          423.0,
+          477.0
+        ],
+        [
+          507.0,
+          475.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0020-00001971",
+      "known": true,
+      "split": "development",
+      "sha256": "2074c2adae1e2bb9a9c4abf8a96b805906087f17778d2568d3964d65e825a6cb",
+      "detected": true,
+      "prediction": "0020",
+      "score": 0.7670803656139928,
+      "detection_seconds": 0.0460109760024352,
+      "embedding_seconds": 0.026601675999700092,
+      "search_seconds": 0.0006862750014988706,
+      "total_seconds": 0.07335883300038404
+    },
+    {
+      "identity": "0021",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000600.jpg",
+      "eyes": [
+        [
+          510.0,
+          147.0
+        ],
+        [
+          526.0,
+          147.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0021-00000600",
+      "known": false,
+      "split": "development",
+      "sha256": "4d3df9806a8f6972f72a34c13133c8e5e4232d12db2982ad3490a7f47c3f1e11",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05243726999833598,
+      "embedding_seconds": 0.02697871700001997,
+      "search_seconds": 0.0007008760003373027,
+      "total_seconds": 0.08017787000062526
+    },
+    {
+      "identity": "0021",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000625.jpg",
+      "eyes": [
+        [
+          397.0,
+          171.0
+        ],
+        [
+          417.0,
+          171.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0021-00000625",
+      "known": false,
+      "split": "development",
+      "sha256": "65417f97cee91e7c4c626546dbaed166597eba19ca3d90ec64a00dc76390c142",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.06350416699933703,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.06350716700035264
+    },
+    {
+      "identity": "0021",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000651.jpg",
+      "eyes": [
+        [
+          364.0,
+          214.0
+        ],
+        [
+          396.0,
+          213.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0021-00000651",
+      "known": false,
+      "split": "development",
+      "sha256": "8ca466b06c6692911f66b8d0d4c3fade0bc39768f2bd0f0f3d3271af26b9f7bf",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.043618416999379406,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.043621516997518484
+    },
+    {
+      "identity": "0021",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000676.jpg",
+      "eyes": [
+        [
+          287.0,
+          470.0
+        ],
+        [
+          367.0,
+          470.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0021-00000676",
+      "known": false,
+      "split": "development",
+      "sha256": "dd3c3bc548cddd137126855f7ad76078f52d024e59b1b6e35e8b16ef767310d7",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05484673099999782,
+      "embedding_seconds": 0.02752477700050804,
+      "search_seconds": 0.0006769729989173356,
+      "total_seconds": 0.0831110869985423
+    },
+    {
+      "identity": "0022",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000225.jpg",
+      "eyes": [
+        [
+          486.0,
+          163.0
+        ],
+        [
+          502.0,
+          163.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0022-00000225",
+      "known": true,
+      "split": "development",
+      "sha256": "05be4c577a5a47ffa9b007df48a6c03b643141740b52776209974a2fe63afca6",
+      "detected": true,
+      "prediction": "0022",
+      "score": 0.48594605889071774,
+      "detection_seconds": 0.04767175499728182,
+      "embedding_seconds": 0.030512399000144796,
+      "search_seconds": 0.0007268789995578118,
+      "total_seconds": 0.07899334199828445
+    },
+    {
+      "identity": "0022",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000246.jpg",
+      "eyes": [
+        [
+          412.0,
+          200.0
+        ],
+        [
+          433.0,
+          200.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0022-00000246",
+      "known": true,
+      "split": "development",
+      "sha256": "e6e5c3b5f6c58fd69752708680a68c6dfe5404f4ccb0bc213148c24ae825d536",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04228497200165293,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04228817300099763
+    },
+    {
+      "identity": "0022",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000268.jpg",
+      "eyes": [
+        [
+          372.0,
+          250.0
+        ],
+        [
+          406.0,
+          250.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0022-00000268",
+      "known": true,
+      "split": "development",
+      "sha256": "fef71982eecad1669a1f98296f30f678411015eaac837d5d7208644698457a61",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05500154699984705,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.05500414699781686
+    },
+    {
+      "identity": "0022",
+      "camera": 2,
+      "source": "P2E_S2_C2.2/00000289.jpg",
+      "eyes": [
+        [
+          263.0,
+          508.0
+        ],
+        [
+          330.0,
+          508.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.2-0022-00000289",
+      "known": true,
+      "split": "development",
+      "sha256": "b25571e7b36632485037fad10fd5b0883e129169f0800ca57b60149d26e382e1",
+      "detected": true,
+      "prediction": "0022",
+      "score": 0.6651933955892514,
+      "detection_seconds": 0.047143798001343384,
+      "embedding_seconds": 0.027840410999488086,
+      "search_seconds": 0.0006886739975016098,
+      "total_seconds": 0.07573378999950364
+    },
+    {
+      "identity": "0023",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001595.jpg",
+      "eyes": [
+        [
+          730.0,
+          194.0
+        ],
+        [
+          746.0,
+          195.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0023-00001595",
+      "known": true,
+      "split": "development",
+      "sha256": "abee159f8910c768ce391a29a8b4dfb6a087af7f1e14a30318a2e9923527e2fb",
+      "detected": true,
+      "prediction": "0023",
+      "score": 0.46857929326373493,
+      "detection_seconds": 0.0472477089970198,
+      "embedding_seconds": 0.034683049998420756,
+      "search_seconds": 0.0017193849998875521,
+      "total_seconds": 0.08371215199804283
+    },
+    {
+      "identity": "0023",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001616.jpg",
+      "eyes": [
+        [
+          550.0,
+          207.0
+        ],
+        [
+          572.0,
+          206.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0023-00001616",
+      "known": true,
+      "split": "development",
+      "sha256": "d21889ba6775fb73e9de9ec52b2cb0331e656c8bff2685efb2aa8d9fc20a13e0",
+      "detected": true,
+      "prediction": "0023",
+      "score": 0.6855525177112918,
+      "detection_seconds": 0.054806225998618174,
+      "embedding_seconds": 0.027751400997658493,
+      "search_seconds": 0.0008048869967751671,
+      "total_seconds": 0.08342131999961566
+    },
+    {
+      "identity": "0023",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001636.jpg",
+      "eyes": [
+        [
+          420.0,
+          265.0
+        ],
+        [
+          452.0,
+          261.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0023-00001636",
+      "known": true,
+      "split": "development",
+      "sha256": "c803180e9a777d75cbf884b906f30351a390c5fe0b0a0f7382573e3bfc0d087f",
+      "detected": true,
+      "prediction": "0023",
+      "score": 0.6691194115902293,
+      "detection_seconds": 0.05598805399858975,
+      "embedding_seconds": 0.03747965300135547,
+      "search_seconds": 0.001729186999000376,
+      "total_seconds": 0.0953040050007985
+    },
+    {
+      "identity": "0023",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001657.jpg",
+      "eyes": [
+        [
+          336.0,
+          489.0
+        ],
+        [
+          398.0,
+          481.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0023-00001657",
+      "known": true,
+      "split": "development",
+      "sha256": "285b6e78353b8daeaecfd7fb8eb7f3bccc0f0be7fbb5f7e3ee60e9487e35645f",
+      "detected": true,
+      "prediction": "0023",
+      "score": 0.7524397969218479,
+      "detection_seconds": 0.06995716500023264,
+      "embedding_seconds": 0.02788971500194748,
+      "search_seconds": 0.0006891750017530285,
+      "total_seconds": 0.09860046199901262
+    },
+    {
+      "identity": "0024",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001243.jpg",
+      "eyes": [
+        [
+          750.0,
+          156.0
+        ],
+        [
+          766.0,
+          161.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0024-00001243",
+      "known": false,
+      "split": "development",
+      "sha256": "a8f9c3c2b48693014540620207bb0f7a3227e446ed52616525257e1c8cdaa551",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.05818869199720211,
+      "embedding_seconds": 0.027975625002000015,
+      "search_seconds": 0.0006544700008817017,
+      "total_seconds": 0.08687929499865277
+    },
+    {
+      "identity": "0024",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001270.jpg",
+      "eyes": [
+        [
+          553.0,
+          161.0
+        ],
+        [
+          576.0,
+          162.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0024-00001270",
+      "known": false,
+      "split": "development",
+      "sha256": "9cea73c9b3114c1b5be974a58a7dc33eb77926fb8c922137206868f28a2744f3",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04723410800215788,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04723740800181986
+    },
+    {
+      "identity": "0024",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001296.jpg",
+      "eyes": [
+        [
+          464.0,
+          192.0
+        ],
+        [
+          501.0,
+          194.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0024-00001296",
+      "known": false,
+      "split": "development",
+      "sha256": "89a5738691f9d5dc75cc24be8bce8df79c17ec150ddbfd86e2aae3a3cf30f02d",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04693947600026149,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04694337600085419
+    },
+    {
+      "identity": "0024",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001323.jpg",
+      "eyes": [
+        [
+          437.0,
+          415.0
+        ],
+        [
+          534.0,
+          421.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0024-00001323",
+      "known": false,
+      "split": "development",
+      "sha256": "036d5891e65262536f6509e25379bbf53306ae1bbe4fd276a472703f53c80c65",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04985319000115851,
+      "embedding_seconds": 0.028431673999875784,
+      "search_seconds": 0.0007365800011029933,
+      "total_seconds": 0.07908245100043132
+    },
+    {
+      "identity": "0025",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001415.jpg",
+      "eyes": [
+        [
+          749.0,
+          174.0
+        ],
+        [
+          766.0,
+          178.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0025-00001415",
+      "known": true,
+      "split": "development",
+      "sha256": "ee6d188ec6b54a197836c3a846cf99e29f4559e732a8fb2e48819fcfb7ad6c79",
+      "detected": true,
+      "prediction": "0025",
+      "score": 0.5089886726282056,
+      "detection_seconds": 0.05089510300240363,
+      "embedding_seconds": 0.029450383997755125,
+      "search_seconds": 0.0007105770018824842,
+      "total_seconds": 0.0811350730000413
+    },
+    {
+      "identity": "0025",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001443.jpg",
+      "eyes": [
+        [
+          512.0,
+          170.0
+        ],
+        [
+          534.0,
+          170.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0025-00001443",
+      "known": true,
+      "split": "development",
+      "sha256": "169426c179f2c525352cb8686f51f99a7f6e58675d5c543f1d35a1afab270fb2",
+      "detected": true,
+      "prediction": "0025",
+      "score": 0.5896712450565034,
+      "detection_seconds": 0.048395333000371465,
+      "embedding_seconds": 0.029061842997180065,
+      "search_seconds": 0.0007172769983299077,
+      "total_seconds": 0.07823485900007654
+    },
+    {
+      "identity": "0025",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001470.jpg",
+      "eyes": [
+        [
+          413.0,
+          231.0
+        ],
+        [
+          448.0,
+          232.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0025-00001470",
+      "known": true,
+      "split": "development",
+      "sha256": "dbce6807d13726fcfa8d651ea5d0b553e71db14ac4e2f25c9cf455c24359ba4a",
+      "detected": true,
+      "prediction": "0025",
+      "score": 0.6766289686262418,
+      "detection_seconds": 0.048738870998931816,
+      "embedding_seconds": 0.03085163600189844,
+      "search_seconds": 0.0007289789973583538,
+      "total_seconds": 0.0803816919978999
+    },
+    {
+      "identity": "0025",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00001498.jpg",
+      "eyes": [
+        [
+          397.0,
+          436.0
+        ],
+        [
+          490.0,
+          439.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0025-00001498",
+      "known": true,
+      "split": "development",
+      "sha256": "265671e6f6a9ed03ad5a7748f591c354261518c53653393e07d8a9a199777cc5",
+      "detected": true,
+      "prediction": "0025",
+      "score": 0.6905652143721139,
+      "detection_seconds": 0.04874017099791672,
+      "embedding_seconds": 0.024907093997171614,
+      "search_seconds": 0.0007166770010371692,
+      "total_seconds": 0.07442254800116643
+    },
+    {
+      "identity": "0026",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002581.jpg",
+      "eyes": [
+        [
+          747.0,
+          256.0
+        ],
+        [
+          763.0,
+          261.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0026-00002581",
+      "known": true,
+      "split": "development",
+      "sha256": "19ce0cd9a27d5cf1947d5f422f573e4d553a50044c55e4d3730bfde2365d67e8",
+      "detected": true,
+      "prediction": "0026",
+      "score": 0.5528946210829089,
+      "detection_seconds": 0.04666614600137109,
+      "embedding_seconds": 0.02526053100154968,
+      "search_seconds": 0.0006748730011167936,
+      "total_seconds": 0.07269736099988222
+    },
+    {
+      "identity": "0026",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002599.jpg",
+      "eyes": [
+        [
+          574.0,
+          276.0
+        ],
+        [
+          597.0,
+          281.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0026-00002599",
+      "known": true,
+      "split": "development",
+      "sha256": "d7a7576179bea11b44aa38c8500e5625d27426ca5b3f3187d0becf2f8972bd05",
+      "detected": true,
+      "prediction": "0026",
+      "score": 0.6063962627960757,
+      "detection_seconds": 0.04530649900334538,
+      "embedding_seconds": 0.024807383000734262,
+      "search_seconds": 0.00079138599903672,
+      "total_seconds": 0.07096557400291204
+    },
+    {
+      "identity": "0026",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002617.jpg",
+      "eyes": [
+        [
+          459.0,
+          335.0
+        ],
+        [
+          491.0,
+          339.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0026-00002617",
+      "known": true,
+      "split": "development",
+      "sha256": "c5616e079da8c413309c5c9c09f5fb4e67ac50beffe4c7a2b20f3b20948e380c",
+      "detected": true,
+      "prediction": "0026",
+      "score": 0.6828714070944899,
+      "detection_seconds": 0.047361022003315156,
+      "embedding_seconds": 0.02528163399983896,
+      "search_seconds": 0.0007619819989486132,
+      "total_seconds": 0.07346574400071404
+    },
+    {
+      "identity": "0026",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002635.jpg",
+      "eyes": [
+        [
+          378.0,
+          516.0
+        ],
+        [
+          427.0,
+          515.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0026-00002635",
+      "known": true,
+      "split": "development",
+      "sha256": "8523dcb62c4eff1f6af10eb5aae4d9ccbdaef2fc9a97e7dfcd914fbd9252f8d3",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04670655000154511,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04670964999968419
+    },
+    {
+      "identity": "0027",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002747.jpg",
+      "eyes": [
+        [
+          734.0,
+          247.0
+        ],
+        [
+          751.0,
+          249.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0027-00002747",
+      "known": false,
+      "split": "development",
+      "sha256": "e9aa22461c755d3756fc9be0ce603b5eb9cd3bb7d9343af2863d3ca9ecd7df11",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04802269300125772,
+      "embedding_seconds": 0.0248251840021112,
+      "search_seconds": 0.0006894750003993977,
+      "total_seconds": 0.07359625800017966
+    },
+    {
+      "identity": "0027",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002766.jpg",
+      "eyes": [
+        [
+          574.0,
+          254.0
+        ],
+        [
+          600.0,
+          257.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0027-00002766",
+      "known": false,
+      "split": "development",
+      "sha256": "baae44f798399c1b7e94f5845a1d55012a335f1e20934698443c9cef0901d3b0",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.046363213998120045,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.046366013997612754
+    },
+    {
+      "identity": "0027",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002786.jpg",
+      "eyes": [
+        [
+          427.0,
+          315.0
+        ],
+        [
+          465.0,
+          315.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0027-00002786",
+      "known": false,
+      "split": "development",
+      "sha256": "f4a4e17ec8c8fbf197b3b2da95e1deb5a0b2339de20338fda0bce05c47c74e86",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.0495146540015412,
+      "embedding_seconds": 0.024834384999849135,
+      "search_seconds": 0.0006602710018341895,
+      "total_seconds": 0.07513372399989748
+    },
+    {
+      "identity": "0027",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00002805.jpg",
+      "eyes": [
+        [
+          373.0,
+          493.0
+        ],
+        [
+          440.0,
+          492.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0027-00002805",
+      "known": false,
+      "split": "development",
+      "sha256": "e7b71d384826cb7be652d4749cb4d0c8177e4c80293618f8f20f0ffcebec7571",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04774406300202827,
+      "embedding_seconds": 0.024885791000997415,
+      "search_seconds": 0.0006563710012414958,
+      "total_seconds": 0.07334523100143997
+    },
+    {
+      "identity": "0028",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000577.jpg",
+      "eyes": [
+        [
+          751.0,
+          160.0
+        ],
+        [
+          769.0,
+          157.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0028-00000577",
+      "known": true,
+      "split": "development",
+      "sha256": "12922042da833d44b702cbe129d69b062382cfedcc1ed667cf9d95b58b32ce0e",
+      "detected": true,
+      "prediction": "0028",
+      "score": 0.45910126429361553,
+      "detection_seconds": 0.05541919300230802,
+      "embedding_seconds": 0.024923395001678728,
+      "search_seconds": 0.0007297789998119697,
+      "total_seconds": 0.08113597400006256
+    },
+    {
+      "identity": "0028",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000602.jpg",
+      "eyes": [
+        [
+          573.0,
+          156.0
+        ],
+        [
+          597.0,
+          156.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0028-00000602",
+      "known": true,
+      "split": "development",
+      "sha256": "40127fbba1256c824fc17fe396dd9eb9c12ec51bd6d7e5e038c55cda7fe79dc5",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04139787600070122,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.041400776000955375
+    },
+    {
+      "identity": "0028",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000626.jpg",
+      "eyes": [
+        [
+          416.0,
+          199.0
+        ],
+        [
+          454.0,
+          196.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0028-00000626",
+      "known": true,
+      "split": "development",
+      "sha256": "296afe1298404f98b13569d1c6b30eefc170ec5ab91cacb97f1f52b6e195ec7e",
+      "detected": true,
+      "prediction": "0028",
+      "score": 0.6716769020371518,
+      "detection_seconds": 0.049417144000472035,
+      "embedding_seconds": 0.024750976997893304,
+      "search_seconds": 0.0007141770001908299,
+      "total_seconds": 0.07494460400266689
+    },
+    {
+      "identity": "0028",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000651.jpg",
+      "eyes": [
+        [
+          266.0,
+          482.0
+        ],
+        [
+          355.0,
+          471.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0028-00000651",
+      "known": true,
+      "split": "development",
+      "sha256": "fe56fda0a8e465fdc70fc260dfddfabcf8dace253e59c9a1316fb9766fe23454",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.045081874002789846,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.045084875000611646
+    },
+    {
+      "identity": "0029",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000744.jpg",
+      "eyes": [
+        [
+          744.0,
+          199.0
+        ],
+        [
+          764.0,
+          198.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0029-00000744",
+      "known": true,
+      "split": "development",
+      "sha256": "19e24b3ae6835c3a10efe1fd7beaacab5db998a0db89cbb0adeb7027f38fe0f1",
+      "detected": true,
+      "prediction": "0029",
+      "score": 0.5829467147478286,
+      "detection_seconds": 0.05825139899752685,
+      "embedding_seconds": 0.027126033000968164,
+      "search_seconds": 0.0006897749990457669,
+      "total_seconds": 0.08612691300004371
+    },
+    {
+      "identity": "0029",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000761.jpg",
+      "eyes": [
+        [
+          582.0,
+          220.0
+        ],
+        [
+          609.0,
+          220.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0029-00000761",
+      "known": true,
+      "split": "development",
+      "sha256": "3058eb0fbf5f16f63ed3d634764f1dfacc615e42e1e5928b1835648e75927f9d",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04095452800174826,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04095782900185441
+    },
+    {
+      "identity": "0029",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000778.jpg",
+      "eyes": [
+        [
+          455.0,
+          268.0
+        ],
+        [
+          493.0,
+          269.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0029-00000778",
+      "known": true,
+      "split": "development",
+      "sha256": "205c8979b96e973f2d2f0650ac105edc43510b9b6d06f3ba572fc24179bdbc50",
+      "detected": true,
+      "prediction": "0029",
+      "score": 0.6300060762284939,
+      "detection_seconds": 0.05010961900188704,
+      "embedding_seconds": 0.02491279400055646,
+      "search_seconds": 0.0007880859993747436,
+      "total_seconds": 0.0758842060022289
+    },
+    {
+      "identity": "0029",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00000795.jpg",
+      "eyes": [
+        [
+          425.0,
+          459.0
+        ],
+        [
+          500.0,
+          464.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0029-00000795",
+      "known": true,
+      "split": "development",
+      "sha256": "fd84b41015f55b4b4c6b8e5a930829ec6ca950f40b1ade490f9beb815e47b0ec",
+      "detected": true,
+      "prediction": "0029",
+      "score": 0.7801349738296623,
+      "detection_seconds": 0.048902587997872615,
+      "embedding_seconds": 0.04002612799740746,
+      "search_seconds": 0.0007273789997270796,
+      "total_seconds": 0.08971770100106369
+    },
+    {
+      "identity": "0030",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003771.jpg",
+      "eyes": [
+        [
+          745.0,
+          200.0
+        ],
+        [
+          763.0,
+          202.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0030-00003771",
+      "known": false,
+      "split": "development",
+      "sha256": "eb5b28df50917cb30be95e1d388015096b9e1e115f8d27cfb9675437a2d0b759",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04974337900057435,
+      "embedding_seconds": 0.024792980999336578,
+      "search_seconds": 0.0006553710009029601,
+      "total_seconds": 0.07525573800012353
+    },
+    {
+      "identity": "0030",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003791.jpg",
+      "eyes": [
+        [
+          557.0,
+          218.0
+        ],
+        [
+          580.0,
+          219.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0030-00003791",
+      "known": false,
+      "split": "development",
+      "sha256": "ecac1f75f20c06a71902ac78de79d606f823452ae9da535418436a6d349e3b93",
+      "detected": false,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04229537400169647,
+      "embedding_seconds": 0.0,
+      "search_seconds": 0.0,
+      "total_seconds": 0.04229867400135845
+    },
+    {
+      "identity": "0030",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003812.jpg",
+      "eyes": [
+        [
+          417.0,
+          281.0
+        ],
+        [
+          452.0,
+          281.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0030-00003812",
+      "known": false,
+      "split": "development",
+      "sha256": "1fe2a6bc0c79969f96348cbc329ba1edab00d93bcecf9a80dc7fafdd72391012",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.04486375100168516,
+      "embedding_seconds": 0.025029306001670193,
+      "search_seconds": 0.0008237889996962622,
+      "total_seconds": 0.0707762530000764
+    },
+    {
+      "identity": "0030",
+      "camera": 2,
+      "source": "P2E_S2_C2.1/00003832.jpg",
+      "eyes": [
+        [
+          284.0,
+          488.0
+        ],
+        [
+          353.0,
+          482.0
+        ]
+      ],
+      "case_id": "P2E_S2_C2.1-0030-00003832",
+      "known": false,
+      "split": "development",
+      "sha256": "76c9793929dc74962cfffc2f52445ecfa7e3b6217f6b3a9a069e59d480b88780",
+      "detected": true,
+      "prediction": null,
+      "score": null,
+      "detection_seconds": 0.045799653002177365,
+      "embedding_seconds": 0.024826184002449736,
+      "search_seconds": 0.000714778001565719,
+      "total_seconds": 0.07139812099921983
+    }
+  ],
+  "limitations": "Camera views share the same recording. Repeated frames are correlated. Not an independent-session or demographic benchmark.",
+  "resources": {
+    "sample_count": 58,
+    "interval_seconds": 0.5,
+    "cpu_definition": "100 percent is one logical core; sampled process RSS, whole-device GPU",
+    "rss_mib": {
+      "mean": 974.534146012931,
+      "peak": 2169.0625
+    },
+    "cpu_percent": {
+      "mean": 130.73135257853517,
+      "peak": 202.94414158939355
+    },
+    "whole_device_vram_mib": {
+      "mean": 520.948275862069,
+      "peak": 612.0
+    },
+    "whole_device_gpu_percent": {
+      "mean": 15.46551724137931,
+      "peak": 40.0
+    }
+  }
+}

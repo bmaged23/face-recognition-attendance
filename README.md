@@ -316,6 +316,7 @@ Settings are read from `.env` through `face_recognition/config.py`.
 | `MODEL_NAME` | `ir_100_webface12m` | Tested AdaFace WebFace12M model |
 | `DEVICE` | `cuda` | `cuda`, `cpu`, or `auto` |
 | `QDRANT_URL` | `http://localhost:5333` | Local database URL |
+| `QDRANT_PATH` | unset | Optional single-process persistent embedded gallery |
 | `QDRANT_COLLECTION` | `people_adaface_ir_100_webface12m` | Shared enrollment and recognition gallery |
 | `RECOGNITION_CONFIDENCE` | `0.4` | Minimum cosine similarity |
 | `RECOGNITION_MIN_MARGIN` | `0.05` | Required top-1 minus top-2 score; `0` disables |
@@ -333,7 +334,7 @@ When only one identity is enrolled, the absolute threshold applies without a
 second-candidate margin. Tune thresholds against representative labeled data;
 the provided values are a tested baseline, not a universal guarantee.
 
-## API and Docker
+## API — enrollment, recognition and job outputs
 
 The optional FastAPI service shares the same runtime and recognition engine:
 
@@ -346,27 +347,41 @@ Open http://localhost:7323/docs for the request schemas. Routes:
 | Method | Route | Purpose |
 |---|---|---|
 | `GET` | `/health` | Service liveness |
+| `GET` | `/ready` | Load the model and verify gallery access; actual inference device |
 | `POST` | `/enroll` | Multipart photo, English name, optional existing UUID |
 | `POST` | `/recognize/image` | Recognize faces in an uploaded image |
 | `POST` | `/video-recognition` | Start a saved-video job in either mode |
-| `GET` | `/jobs/{job_id}` | Read job status and result paths |
+| `GET` | `/jobs/{job_id}` | Read job status and results |
+| `GET` | `/jobs/{job_id}/artifacts/results` | Download completed JSON |
+| `GET` | `/jobs/{job_id}/artifacts/video` | Download/seek completed annotated video |
 
 Video jobs take paths accessible to the server, not multipart video uploads.
 Job metadata is held in memory; generated files persist. Live cameras use the
 camera CLI. This API has no authentication and is intended for trusted/local
-use. `/health` is a liveness check, not a model/database readiness test.
+use. `/health` is a liveness check; `/ready` checks model/database readiness.
+[Read the API guide](docs/api/README.md) for requests, readiness and persistent
+embedded storage. The queue permits four running/queued jobs by default and
+returns HTTP 429 when full; completed metadata is limited to 128 jobs.
 
-For the full GPU Docker stack, install the NVIDIA Container Toolkit or use
+## Docker — complete GPU application
+
+The public-image release is undergoing exact-container qualification.
+[Docker guide](docs/deployment/DOCKER.md) · [CI/CD guide](docs/deployment/README.md).
+The maintained recipe packages the compact inference checkpoint and supports a
+persistent embedded gallery without a separate database container.
+
+For the external-Qdrant Compose stack, install the NVIDIA Container Toolkit or use
 Docker Desktop with supported GPU/WSL integration, then run:
 
 ```sh
 docker compose up --build -d
 ```
 
-Compose mounts the checkpoint read-only, `input/` read-only, and `output/` for
-results; Qdrant uses a named volume. `.dockerignore` excludes local data and
-checkpoints from image builds. The Docker configuration is provided but has
-not been validated end to end in this workspace.
+Compose mounts `input/` read-only and `output/` for results; Qdrant uses a
+named volume. It selects `deployment/docker/Dockerfile`, whose build downloads
+and verifies the checkpoint before exporting the inference backbone. Source
+checkpoints and personal data are excluded from the build context. The Compose
+route remains separate from the single-container embedded-store qualification.
 
 ## Project layout
 
@@ -394,7 +409,10 @@ vendor/adaface/                 Pinned inference source, MTCNN weights, licenses
 docs/                           Architecture, validation, evaluation, media, notices
 requirements.txt                Exact .venv package versions
 .env.example                    Shareable configuration template
-Dockerfile / docker-compose.yml Optional API and Qdrant deployment
+deployment/docker/              Maintained complete GPU image recipe
+docker-compose.yml              Optional external-Qdrant deployment
+evaluation/                     Frozen annotated cases and regression gate
+.github/workflows/              Hosted tests and gated GPU image delivery
 ```
 
 Local-only folders are ignored: `.venv/`, `.python/`, `.cache/`, `input/`,
@@ -402,6 +420,39 @@ Local-only folders are ignored: `.venv/`, `.python/`, `.cache/`, `input/`,
 working notes). The active application is independent of the archive. Private
 photos, checkpoints, and generated outputs are not committed. Documentation
 images and vendored small MTCNN `.npy` weights remain eligible for Git.
+
+## CI/CD — tests before publication
+
+Hosted offline tests → candidate image build → exact-image GPU recognition/API
+quality gate → Docker Hub publication → anonymous pull and normal startup test.
+The local trusted GPU runner must be online for model gates. Runtime changes
+trigger full qualification; documentation-only changes avoid model rebuilds.
+[Read the CI/CD guide](docs/deployment/README.md).
+
+## Measured native evaluation
+
+![Native latency, compact checkpoint and RAM measurements](docs/evaluation/native-performance.svg)
+
+| Check | Measured native result |
+| --- | --- |
+| Offline behavior/library suite | **81 passing tests** (behavior, media, actual Qdrant/HTTP libraries, gate failures) |
+| Frozen labeled probes | 228 executions; 19 enrolled identities; 10 unseen identities |
+| Known probes including detector misses | **113/152 correct (74.34%)** |
+| Known probes conditional on detection | **113/113 correct**; zero wrong identities accepted |
+| Unknown-person rejection | **0/56 detected unknown probes falsely accepted**; 20 additional unknown probes missed by detection |
+| Matched CPU / GPU median probe latency | **1,287.20 / 110.95 ms**; identical outcomes, **11.60×** median ratio |
+| Full / compact checkpoint | **1.53 GB / 261 MB**; 917 tensors equal; all 228 outcomes and scores unchanged |
+| Full / compact sampled peak process RAM | **2,135.55 / 1,034.34 MiB** |
+
+GTX 1660 Ti 6 GiB; two inference threads; local Qdrant. Probe latency excludes
+initialization, enrollment, HTTP transport and video encoding. The camera views
+share one recording and probes are correlated; these are exposed development
+cases, not population accuracy. The main weakness is face detection. No
+liveness/anti-spoofing or fairness certification is established. Container
+qualification is recorded separately from native scores.
+
+[Full protocol, per-sample results, rejected alternatives and limitations](docs/evaluation/README.md) ·
+[Historical validation](docs/VALIDATION.md).
 
 ## Validation and evaluation
 

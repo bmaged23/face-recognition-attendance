@@ -1,0 +1,1155 @@
+{
+  "version": 1,
+  "kind": "Frozen model regression baseline, NOT human ground truth",
+  "human_reference": "cases.json identities and eye annotations from ChokePoint",
+  "fixture_sha256": "6e99cb5f4f28e15fb5450b5e2cd079187287ddda2d13c1b43447c117474cd08d",
+  "model_signature": "v1:adaface:ir_100_webface12m:native-alignment:bgr:2bafbe30750677b7165236dbe05054a179c716f29fcbd2f47475aaeaa61acd95",
+  "required_gallery_count": 19,
+  "required_case_count": 228,
+  "min_correct_known": 113,
+  "min_detected_unknown": 56,
+  "max_wrong_known": 0,
+  "max_unknown_false_accepts": 0,
+  "outcomes": [
+    {
+      "case_id": "P2E_S2_C2.1-0001-00002420",
+      "detected": true,
+      "prediction": "0001"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0001-00002443",
+      "detected": true,
+      "prediction": "0001"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0001-00002465",
+      "detected": true,
+      "prediction": "0001"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0001-00002488",
+      "detected": true,
+      "prediction": "0001"
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0002-00000808",
+      "detected": true,
+      "prediction": "0002"
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0002-00000828",
+      "detected": true,
+      "prediction": "0002"
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0002-00000847",
+      "detected": true,
+      "prediction": "0002"
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0002-00000867",
+      "detected": true,
+      "prediction": "0002"
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0003-00000976",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0003-00001003",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0003-00001031",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0003-00001058",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0004-00003921",
+      "detected": true,
+      "prediction": "0004"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0004-00003936",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0004-00003952",
+      "detected": true,
+      "prediction": "0004"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0004-00003967",
+      "detected": true,
+      "prediction": "0004"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0005-00003610",
+      "detected": true,
+      "prediction": "0005"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0005-00003634",
+      "detected": true,
+      "prediction": "0005"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0005-00003659",
+      "detected": true,
+      "prediction": "0005"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0005-00003683",
+      "detected": true,
+      "prediction": "0005"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0006-00002239",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0006-00002262",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0006-00002286",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0006-00002309",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0007-00000900",
+      "detected": true,
+      "prediction": "0007"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0007-00000926",
+      "detected": true,
+      "prediction": "0007"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0007-00000952",
+      "detected": true,
+      "prediction": "0007"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0007-00000978",
+      "detected": true,
+      "prediction": "0007"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0009-00003187",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0009-00003204",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0009-00003222",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0009-00003239",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0010-00001759",
+      "detected": true,
+      "prediction": "0010"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0010-00001782",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0010-00001804",
+      "detected": true,
+      "prediction": "0010"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0010-00001827",
+      "detected": true,
+      "prediction": "0010"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0011-00002059",
+      "detected": true,
+      "prediction": "0011"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0011-00002084",
+      "detected": true,
+      "prediction": "0011"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0011-00002110",
+      "detected": true,
+      "prediction": "0011"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0011-00002135",
+      "detected": true,
+      "prediction": "0011"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0012-00003346",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0012-00003361",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0012-00003376",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0012-00003391",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0013-00000191",
+      "detected": true,
+      "prediction": "0013"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0013-00000224",
+      "detected": true,
+      "prediction": "0013"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0013-00000256",
+      "detected": true,
+      "prediction": "0013"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0013-00000289",
+      "detected": true,
+      "prediction": "0013"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0014-00000407",
+      "detected": true,
+      "prediction": "0014"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0014-00000430",
+      "detected": true,
+      "prediction": "0014"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0014-00000452",
+      "detected": true,
+      "prediction": "0014"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0014-00000475",
+      "detected": true,
+      "prediction": "0014"
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0015-00000404",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0015-00000429",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0015-00000454",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0015-00000479",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0016-00002887",
+      "detected": true,
+      "prediction": "0016"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0016-00002905",
+      "detected": true,
+      "prediction": "0016"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0016-00002923",
+      "detected": true,
+      "prediction": "0016"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0016-00002941",
+      "detected": true,
+      "prediction": "0016"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0017-00003026",
+      "detected": true,
+      "prediction": "0017"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0017-00003047",
+      "detected": true,
+      "prediction": "0017"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0017-00003068",
+      "detected": true,
+      "prediction": "0017"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0017-00003089",
+      "detected": true,
+      "prediction": "0017"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0018-00001070",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0018-00001092",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0018-00001113",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0018-00001135",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0019-00003483",
+      "detected": true,
+      "prediction": "0019"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0019-00003505",
+      "detected": true,
+      "prediction": "0019"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0019-00003528",
+      "detected": true,
+      "prediction": "0019"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0019-00003550",
+      "detected": true,
+      "prediction": "0019"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0020-00001916",
+      "detected": true,
+      "prediction": "0020"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0020-00001934",
+      "detected": true,
+      "prediction": "0020"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0020-00001953",
+      "detected": true,
+      "prediction": "0020"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0020-00001971",
+      "detected": true,
+      "prediction": "0020"
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0021-00000600",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0021-00000625",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0021-00000651",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0021-00000676",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0022-00000225",
+      "detected": true,
+      "prediction": "0022"
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0022-00000246",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0022-00000268",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.2-0022-00000289",
+      "detected": true,
+      "prediction": "0022"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0023-00001595",
+      "detected": true,
+      "prediction": "0023"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0023-00001616",
+      "detected": true,
+      "prediction": "0023"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0023-00001636",
+      "detected": true,
+      "prediction": "0023"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0023-00001657",
+      "detected": true,
+      "prediction": "0023"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0024-00001243",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0024-00001270",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0024-00001296",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0024-00001323",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0025-00001415",
+      "detected": true,
+      "prediction": "0025"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0025-00001443",
+      "detected": true,
+      "prediction": "0025"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0025-00001470",
+      "detected": true,
+      "prediction": "0025"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0025-00001498",
+      "detected": true,
+      "prediction": "0025"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0026-00002581",
+      "detected": true,
+      "prediction": "0026"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0026-00002599",
+      "detected": true,
+      "prediction": "0026"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0026-00002617",
+      "detected": true,
+      "prediction": "0026"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0026-00002635",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0027-00002747",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0027-00002766",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0027-00002786",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0027-00002805",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0028-00000577",
+      "detected": true,
+      "prediction": "0028"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0028-00000602",
+      "detected": true,
+      "prediction": "0028"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0028-00000626",
+      "detected": true,
+      "prediction": "0028"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0028-00000651",
+      "detected": true,
+      "prediction": "0028"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0029-00000744",
+      "detected": true,
+      "prediction": "0029"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0029-00000761",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0029-00000778",
+      "detected": true,
+      "prediction": "0029"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0029-00000795",
+      "detected": true,
+      "prediction": "0029"
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0030-00003771",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0030-00003791",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0030-00003812",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C2.1-0030-00003832",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0001-00002435",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0001-00002450",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0001-00002464",
+      "detected": true,
+      "prediction": "0001"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0001-00002479",
+      "detected": true,
+      "prediction": "0001"
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0002-00000812",
+      "detected": true,
+      "prediction": "0002"
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0002-00000825",
+      "detected": true,
+      "prediction": "0002"
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0002-00000839",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0002-00000852",
+      "detected": true,
+      "prediction": "0002"
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0003-00000980",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0003-00001002",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0003-00001025",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0003-00001047",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0004-00003930",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0004-00003941",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0004-00003951",
+      "detected": true,
+      "prediction": "0004"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0004-00003962",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0005-00003627",
+      "detected": true,
+      "prediction": "0005"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0005-00003641",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0005-00003655",
+      "detected": true,
+      "prediction": "0005"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0005-00003669",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0006-00002255",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0006-00002267",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0006-00002278",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0006-00002290",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0007-00000909",
+      "detected": true,
+      "prediction": "0007"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0007-00000927",
+      "detected": true,
+      "prediction": "0007"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0007-00000946",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0007-00000964",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0009-00003199",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0009-00003212",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0009-00003226",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0009-00003239",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0010-00001768",
+      "detected": true,
+      "prediction": "0010"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0010-00001783",
+      "detected": true,
+      "prediction": "0010"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0010-00001799",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0010-00001814",
+      "detected": true,
+      "prediction": "0010"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0011-00002070",
+      "detected": true,
+      "prediction": "0011"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0011-00002088",
+      "detected": true,
+      "prediction": "0011"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0011-00002107",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0011-00002125",
+      "detected": true,
+      "prediction": "0011"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0013-00000203",
+      "detected": true,
+      "prediction": "0013"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0013-00000227",
+      "detected": true,
+      "prediction": "0013"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0013-00000251",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0013-00000275",
+      "detected": true,
+      "prediction": "0013"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0014-00000417",
+      "detected": true,
+      "prediction": "0014"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0014-00000432",
+      "detected": true,
+      "prediction": "0014"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0014-00000447",
+      "detected": true,
+      "prediction": "0014"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0014-00000462",
+      "detected": true,
+      "prediction": "0014"
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0015-00000413",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0015-00000428",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0015-00000444",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0015-00000459",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0016-00002899",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0016-00002911",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0016-00002924",
+      "detected": true,
+      "prediction": "0016"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0016-00002936",
+      "detected": true,
+      "prediction": "0016"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0017-00003039",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0017-00003053",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0017-00003066",
+      "detected": true,
+      "prediction": "0017"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0017-00003080",
+      "detected": true,
+      "prediction": "0017"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0018-00001078",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0018-00001095",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0018-00001112",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0018-00001129",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0019-00003495",
+      "detected": true,
+      "prediction": "0019"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0019-00003509",
+      "detected": true,
+      "prediction": "0019"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0019-00003524",
+      "detected": true,
+      "prediction": "0019"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0019-00003538",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0020-00001926",
+      "detected": true,
+      "prediction": "0020"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0020-00001937",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0020-00001949",
+      "detected": true,
+      "prediction": "0020"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0020-00001960",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0021-00000610",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0021-00000629",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0021-00000648",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0021-00000667",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0022-00000231",
+      "detected": true,
+      "prediction": "0022"
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0022-00000248",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0022-00000266",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.2-0022-00000283",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0023-00001603",
+      "detected": true,
+      "prediction": "0023"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0023-00001618",
+      "detected": true,
+      "prediction": "0023"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0023-00001633",
+      "detected": true,
+      "prediction": "0023"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0023-00001648",
+      "detected": true,
+      "prediction": "0023"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0024-00001264",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0024-00001278",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0024-00001291",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0024-00001305",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0025-00001427",
+      "detected": true,
+      "prediction": "0025"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0025-00001446",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0025-00001466",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0025-00001485",
+      "detected": true,
+      "prediction": "0025"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0026-00002594",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0026-00002607",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0026-00002620",
+      "detected": true,
+      "prediction": "0026"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0026-00002633",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0027-00002760",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0027-00002773",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0027-00002787",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0027-00002800",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0028-00000588",
+      "detected": true,
+      "prediction": "0028"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0028-00000605",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0028-00000623",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0028-00000640",
+      "detected": true,
+      "prediction": "0028"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0029-00000755",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0029-00000766",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0029-00000777",
+      "detected": true,
+      "prediction": "0029"
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0029-00000788",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0030-00003783",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0030-00003798",
+      "detected": false,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0030-00003814",
+      "detected": true,
+      "prediction": null
+    },
+    {
+      "case_id": "P2E_S2_C1.1-0030-00003829",
+      "detected": true,
+      "prediction": null
+    }
+  ]
+}

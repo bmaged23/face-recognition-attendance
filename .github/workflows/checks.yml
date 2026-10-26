@@ -1,0 +1,36 @@
+name: Checks
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+  workflow_call:
+permissions:
+  contents: read
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  offline:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      OMP_NUM_THREADS: '2'
+      OPENBLAS_NUM_THREADS: '2'
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12.15'
+      - name: Install pinned CPU test environment
+        run: python -m pip install -r requirements/cpu.txt
+      - name: Verify environment and media tools
+        run: |
+          python -m pip check
+          if ! command -v ffmpeg || ! command -v ffprobe; then
+            timeout 120s sudo apt-get update -qq
+            timeout 180s sudo apt-get install -y --no-install-recommends ffmpeg
+          fi
+          ffmpeg -version
+          ffprobe -version
+      - name: Run all behavior and real-library tests
+        run: python -m unittest discover -s tests -v

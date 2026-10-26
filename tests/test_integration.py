@@ -41,6 +41,7 @@ class LibraryIntegrationTests(unittest.TestCase):
         self.vector[0] = 1.0
         outer = self
         class FakeBackend:
+            device = "cpu"
             def detect_and_embed(self, frame):
                 return [FaceSample((0, 0, 10, 10), outer.vector.copy())]
         self.runtime = Runtime(self.settings, FakeBackend(), self.people)
@@ -57,6 +58,12 @@ class LibraryIntegrationTests(unittest.TestCase):
     def test_real_decoder_rejects_non_image(self):
         with self.assertRaisesRegex(ValueError, "valid image"):
             decode_photo(b"this is not an image", 100)
+
+    def test_large_photo_is_bounded_before_detector_inference(self):
+        stream = io.BytesIO()
+        Image.new('RGB', (2400, 1200), 'red').save(stream, format='JPEG')
+        frame = decode_photo(stream.getvalue(), 1_000_000, max_dimension=800)
+        self.assertEqual(frame.shape, (400, 800, 3))
 
     def test_real_qdrant_enrollment_update_and_recognition(self):
         person = self.runtime.enrollment().enroll("Alice Smith", self.photo)
@@ -83,6 +90,44 @@ class LibraryIntegrationTests(unittest.TestCase):
             self.assertEqual(bad_name.status_code, 422)
             bad_image = http.post("/recognize/image", files={"image": ("bad.png", b"not-an-image", "image/png")})
             self.assertEqual(bad_image.status_code, 422)
+
+    def test_readiness_initializes_model_and_checks_gallery(self):
+        from unittest.mock import Mock
+        factory = Mock(return_value=self.runtime)
+        with TestClient(create_app(runtime_factory=factory, settings=self.settings)) as http:
+            self.assertEqual(http.get('/health').status_code, 200)
+            factory.assert_not_called()
+            for _ in range(2):
+                response = http.get('/ready')
+                self.assertEqual(response.status_code, 200, response.text)
+                self.assertEqual(response.json()['device'], 'cpu')
+            factory.assert_called_once_with(self.settings)
+            self.client.delete_collection(self.settings.collection)
+            self.assertEqual(http.get('/ready').status_code, 503)
+
+    def test_readiness_does_not_report_missing_model_as_ready(self):
+        def unavailable(_):
+            raise FileNotFoundError('/private/model/path')
+        with TestClient(create_app(runtime_factory=unavailable, settings=self.settings)) as http:
+            self.assertEqual(http.get('/health').status_code, 200)
+            response = http.get('/ready')
+            self.assertEqual(response.status_code, 503)
+            self.assertNotIn('/private/', response.text)
+
+    def test_embedded_gallery_survives_client_restart(self):
+        from dataclasses import replace
+        settings = replace(self.settings, qdrant_path=self.directory / 'gallery')
+        first = PeopleStore(settings)
+        try:
+            person = first.enroll('Alice Smith', self.vector)
+        finally:
+            first.client.close()
+        second = PeopleStore(settings)
+        try:
+            found = second.match(self.vector, 0.9)
+            self.assertEqual(found[0].id, person.id)
+        finally:
+            second.client.close()
 
     def make_video(self):
         video = self.directory / "test.avi"
@@ -164,6 +209,10 @@ class LibraryIntegrationTests(unittest.TestCase):
                         break
                     time.sleep(0.01)
                 self.assertEqual(job["status"], "done", job)
+                artifact = http.get(f'/jobs/{job_id}/artifacts/results')
+                self.assertEqual(artifact.status_code, 200)
+                self.assertEqual(artifact.json(), job['result']['records'])
+                self.assertEqual(http.get(f'/jobs/{job_id}/artifacts/video').status_code, 404)
             record = job["result"]["records"][0]
             self.assertEqual(record["id"], person["id"])
             self.assertEqual(set(record), {"id", "name", "checkin", "checkout"})

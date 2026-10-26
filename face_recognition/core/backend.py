@@ -39,6 +39,7 @@ class FaceBackend:
 
     def _load_adaface(self):
         import torch
+        torch.set_num_threads(self.settings.inference_threads)
         checkpoint_path = self.settings.checkpoint
         if not checkpoint_path.is_file():
             raise FileNotFoundError(f"AdaFace checkpoint not found: {checkpoint_path}")
@@ -64,6 +65,9 @@ class FaceBackend:
         self.model.load_state_dict(state, strict=True)
         self.model.to(self.device).eval()
         self.detector = MTCNN(device="cuda:0" if self.device == "cuda" else "cpu", crop_size=(112, 112))
+        self.detector.thresholds[-1] = self.settings.mtcnn_final_threshold
+        self.detector.factor = self.settings.mtcnn_scale_factor
+        self.detector.min_face_size = self.settings.mtcnn_min_face_size
 
     def _load_insightface(self):
         import onnxruntime as ort
@@ -72,6 +76,7 @@ class FaceBackend:
         if self.settings.device == "cuda" and not available:
             raise RuntimeError("CUDA was requested but ONNX Runtime cannot access a GPU")
         gpu = available and self.settings.device != "cpu"
+        self.device = 'cuda' if gpu else 'cpu'
         providers = ["CUDAExecutionProvider", "CPUExecutionProvider"] if gpu else ["CPUExecutionProvider"]
         self.model = FaceAnalysis(
             name=self.settings.model_name, root=str(self.settings.insightface_root),
@@ -120,8 +125,9 @@ class FaceBackend:
                 tensors.append(torch.from_numpy(array).permute(2, 0, 1))
             batches = []
             with torch.inference_mode():
-                for index in range(0, len(tensors), 32):
-                    features, _ = self.model(torch.stack(tensors[index:index + 32]).to(self.device))
+                batch_size = self.settings.embedding_batch_size
+                for index in range(0, len(tensors), batch_size):
+                    features, _ = self.model(torch.stack(tensors[index:index + batch_size]).to(self.device))
                     batches.append(features.cpu().numpy())
             embeddings = np.concatenate(batches)
             embeddings /= np.linalg.norm(embeddings, axis=1, keepdims=True) + 1e-8

@@ -22,6 +22,8 @@ class Settings:
     model_name: str = "ir_100_webface12m"
     collection: str = "people_adaface_ir_100_webface12m"
     qdrant_url: str = "http://localhost:5333"
+    qdrant_path: Path | None = None  # Optional persistent embedded store for one app process.
+    output_dir: Path | None = None
     device: str = "auto"
     confidence: float = 0.4
     recognition_min_margin: float = 0.05  # Calibrate for your enrollment gallery; 0 disables.
@@ -31,9 +33,18 @@ class Settings:
     iou_threshold: float = 0.5
     recognition_refresh_seconds: float = 0.5
     detector_size: int = 640
+    mtcnn_final_threshold: float = 0.9
+    mtcnn_scale_factor: float = 0.85
+    mtcnn_min_face_size: int = 20
+    embedding_batch_size: int = 32
+    inference_threads: int = 2
     model_path: Path | None = None
     insightface_root: Path = Path.home() / ".insightface"
     max_image_bytes: int = 10 * 1024 * 1024
+    max_image_dimension: int = 1600
+    job_workers: int = 1
+    job_capacity: int = 4  # Running and queued jobs combined.
+    job_history: int = 128  # Completed job metadata retained in memory.
 
     def __post_init__(self):
         registry = ADAFACE_MODELS if self.family == "adaface" else INSIGHTFACE_MODELS
@@ -53,8 +64,14 @@ class Settings:
             raise ValueError('recognition_refresh_seconds must be positive')
         if self.device not in {"auto", "cpu", "cuda"}:
             raise ValueError("device must be auto, cpu, or cuda")
-        if self.detector_size <= 0 or self.max_image_bytes <= 0:
+        if self.detector_size <= 0 or self.max_image_bytes <= 0 or self.max_image_dimension <= 0:
             raise ValueError("detector_size and max_image_bytes must be positive")
+        if not 0 < self.mtcnn_final_threshold < 1 or not 0 < self.mtcnn_scale_factor < 1:
+            raise ValueError('MTCNN threshold and scale factor must be in (0, 1)')
+        if self.mtcnn_min_face_size < 12 or not 1 <= self.embedding_batch_size <= 128 or self.inference_threads < 1:
+            raise ValueError('Invalid minimum face size, embedding batch size or inference thread count')
+        if not 1 <= self.job_workers <= self.job_capacity or self.job_history < 1:
+            raise ValueError('Require 1 <= job_workers <= job_capacity and positive job_history')
 
     @property
     def model_signature(self) -> str:
@@ -104,6 +121,8 @@ class Settings:
             family=family, model_name=model,
             collection=os.getenv("QDRANT_COLLECTION", f"people_{family}_{model}"),
             qdrant_url=os.getenv("QDRANT_URL", "http://localhost:5333"),
+            qdrant_path=Path(os.environ['QDRANT_PATH']).expanduser() if os.getenv('QDRANT_PATH') else None,
+            output_dir=Path(os.environ['OUTPUT_DIR']).expanduser() if os.getenv('OUTPUT_DIR') else None,
             device=os.getenv("DEVICE", "auto"),
             confidence=float(os.getenv("RECOGNITION_CONFIDENCE", "0.4")),
             recognition_min_margin=float(os.getenv('RECOGNITION_MIN_MARGIN', str(cls.recognition_min_margin))),
@@ -113,7 +132,16 @@ class Settings:
             iou_threshold=float(os.getenv('IOU_THRESHOLD', str(cls.iou_threshold))),
             recognition_refresh_seconds=float(os.getenv('RECOGNITION_REFRESH_SECONDS', str(cls.recognition_refresh_seconds))),
             detector_size=int(os.getenv("DETECTOR_SIZE", "640")),
+            mtcnn_final_threshold=float(os.getenv('MTCNN_FINAL_THRESHOLD', str(cls.mtcnn_final_threshold))),
+            mtcnn_scale_factor=float(os.getenv('MTCNN_SCALE_FACTOR', str(cls.mtcnn_scale_factor))),
+            mtcnn_min_face_size=int(os.getenv('MTCNN_MIN_FACE_SIZE', str(cls.mtcnn_min_face_size))),
+            embedding_batch_size=int(os.getenv('EMBEDDING_BATCH_SIZE', str(cls.embedding_batch_size))),
+            inference_threads=int(os.getenv('INFERENCE_THREADS', str(cls.inference_threads))),
             model_path=Path(path).expanduser() if path else None,
             insightface_root=Path(os.getenv("INSIGHTFACE_ROOT", str(Path.home() / ".insightface"))).expanduser(),
             max_image_bytes=int(os.getenv("MAX_IMAGE_BYTES", str(10 * 1024 * 1024))),
+            max_image_dimension=int(os.getenv('MAX_IMAGE_DIMENSION', str(cls.max_image_dimension))),
+            job_workers=int(os.getenv('JOB_WORKERS', str(cls.job_workers))),
+            job_capacity=int(os.getenv('JOB_CAPACITY', str(cls.job_capacity))),
+            job_history=int(os.getenv('JOB_HISTORY', str(cls.job_history))),
         )

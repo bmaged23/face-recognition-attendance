@@ -17,7 +17,8 @@ class Runtime:
                                  self.settings.recognition_min_margin)
 
     def enrollment(self):
-        return EnrollmentService(self.backend, self.people, self.settings.max_image_bytes)
+        return EnrollmentService(self.backend, self.people, self.settings.max_image_bytes,
+                                 self.settings.max_image_dimension)
 
 
 def create_runtime(settings: Settings) -> Runtime:

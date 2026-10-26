@@ -1,4 +1,8 @@
-# Validation
+# Historical validation
+
+For the new 228-probe study and current delivery gates, see the
+[current evaluation report](evaluation/README.md). Counts below belong to the
+earlier protocol and are retained for context.
 
 The tested environment uses Python 3.12.15, PyTorch 2.5.1+cu124, and the exact
 installed versions pinned in `requirements.txt`. Real GPU execution used an

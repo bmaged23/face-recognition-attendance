@@ -7,13 +7,16 @@ services:
       - qdrant_data:/qdrant/storage
     restart: unless-stopped
   face_recognition:
-    build: .
+    build:
+      context: .
+      dockerfile: deployment/docker/Dockerfile
     env_file:
       - .env
     ports:
       - "7323:7323"
     environment:
       QDRANT_URL: http://qdrant:6333
+      QDRANT_PATH: ""
       DEVICE: cuda
     deploy:
       resources:
@@ -23,7 +26,6 @@ services:
               count: 1
               capabilities: [gpu]
     volumes:
-      - ./vendor/adaface/pretrained:/app/vendor/adaface/pretrained:ro
       - ./input:/app/input:ro
       - ./output:/app/output
     depends_on:

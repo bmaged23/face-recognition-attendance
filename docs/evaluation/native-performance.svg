@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 570" role="img" aria-labelledby="title desc">
+<title id="title">Measured recognition latency and checkpoint optimization</title>
+<desc id="desc">Matched 228 CPU and GPU probe outcomes. Inference-only export reduces checkpoint size and sampled startup/run RAM.</desc>
+<rect width="1000" height="570" rx="18" fill="#0b1220"/>
+<g font-family="Arial,sans-serif" fill="#e7edf7">
+<text x="30" y="42" font-size="24" font-weight="bold">Measured native recognition performance</text>
+<text x="30" y="70" font-size="15" fill="#abbad0">GTX 1660 Ti · two inference threads · 228 fixed probes · CUDA model, local Qdrant</text>
+<text x="30" y="132" font-size="17">CPU probe</text>
+<rect x="240" y="110" width="496.5" height="30" rx="5" fill="#8fb0d5"/>
+<text x="805" y="132" font-size="17">1287.2 ms</text>
+<text x="30" y="190" font-size="17">GPU probe</text>
+<rect x="240" y="168" width="42.8" height="30" rx="5" fill="#64dec7"/>
+<text x="805" y="190" font-size="17">111.0 ms</text>
+<text x="30" y="248" font-size="17">Original weights</text>
+<rect x="240" y="226" width="515.3" height="30" rx="5" fill="#8fb0d5"/>
+<text x="805" y="248" font-size="17">1526.8 MB</text>
+<text x="30" y="306" font-size="17">Inference weights</text>
+<rect x="240" y="284" width="88.1" height="30" rx="5" fill="#64dec7"/>
+<text x="805" y="306" font-size="17">261.2 MB</text>
+<text x="30" y="364" font-size="17">Original peak RAM</text>
+<rect x="240" y="342" width="501.4" height="30" rx="5" fill="#8fb0d5"/>
+<text x="805" y="364" font-size="17">2136 MiB</text>
+<text x="30" y="422" font-size="17">Compact peak RAM</text>
+<rect x="240" y="400" width="242.8" height="30" rx="5" fill="#64dec7"/>
+<text x="805" y="422" font-size="17">1034 MiB</text>
+<text x="30" y="495" font-size="19" fill="#64dec7">11.60× lower median probe latency; identical CPU/GPU identity outcomes.</text>
+<text x="30" y="523" font-size="15" fill="#abbad0">Probe timing excludes gallery enrollment, startup and video encoding. RAM includes sampled startup.</text>
+<text x="30" y="548" font-size="15" fill="#abbad0">113/152 known probes recognized overall; all 113 detected known probes correct. Small research set.</text>
+</g></svg>

@@ -1,0 +1,9 @@
+{
+  "source_sha256": "0e7a3238d2a50f3fe3860782534928ac7cb2598977cf897f6869fd5ac2493fd0",
+  "export_sha256": "2bafbe30750677b7165236dbe05054a179c716f29fcbd2f47475aaeaa61acd95",
+  "source_bytes": 1526801999,
+  "export_bytes": 261182802,
+  "tensor_count": 917,
+  "exact_tensor_equality": true,
+  "note": "File fingerprints differ. Re-enroll galleries when selecting this export."
+}

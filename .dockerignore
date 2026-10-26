@@ -7,8 +7,14 @@ archive/
 description/
 input/
 output/
-tests/
 docs/
 **/__pycache__/
 **/*.pyc
 vendor/adaface/pretrained/
+
+evaluation/
+.github/
+.gitignore
+
+_site/
+.ruff_cache/

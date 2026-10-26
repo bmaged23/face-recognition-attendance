@@ -23,7 +23,10 @@ class PeopleStore:
     def __init__(self, settings, client=None):
         from qdrant_client import QdrantClient
         from qdrant_client.models import Distance, VectorParams
-        self.client = client if client is not None else QdrantClient(url=settings.qdrant_url, timeout=60)
+        self.client = client if client is not None else (
+            QdrantClient(path=str(settings.qdrant_path)) if settings.qdrant_path is not None
+            else QdrantClient(url=settings.qdrant_url, timeout=60)
+        )
         self.collection = settings.collection
         self.signature = settings.model_signature
         if not self.client.collection_exists(self.collection):
