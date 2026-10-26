@@ -27,7 +27,7 @@ def main():
         "https://hub.docker.com/v2/repositories/bmaged23/face-recognition-attendance/",
         {
             "is_private": False,
-            "description": "GPU face recognition and attendance with AdaFace, embedded gallery, HTTP API and gated model evaluation.",
+            "description": "GPU AdaFace recognition and attendance with a persistent gallery, HTTP API and evaluated releases.",
             "full_description": (root / "deployment/dockerhub/README.md").read_text(),
         },
         login["token"],
