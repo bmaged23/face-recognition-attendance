@@ -7,6 +7,12 @@ camera stream, and optionally record attendance. The project uses **AdaFace
 embeddings**, **MTCNN face detection and alignment**, and **Qdrant cosine
 search**, with one shared recognition pipeline for both entry points.
 
+[Video demo](https://bmaged23.github.io/face-recognition-attendance/) ·
+[Source setup](#install-and-run-from-a-fresh-clone) ·
+[Docker](docs/deployment/DOCKER.md) · [API](docs/api/README.md) ·
+[Evaluation](docs/evaluation/README.md) · [CI/CD](docs/deployment/README.md) ·
+[Documentation index](docs/README.md)
+
 ## Demo
 
 ![Looping check-in and check-out recognition demo](docs/media/attendance-demo.gif)
@@ -368,10 +374,52 @@ returns HTTP 429 when full; completed metadata is limited to 128 jobs.
 
 ## Docker — complete GPU application
 
-The public-image release is undergoing exact-container qualification.
-[Docker guide](docs/deployment/DOCKER.md) · [CI/CD guide](docs/deployment/README.md).
-The maintained recipe packages the compact inference checkpoint and supports a
-persistent embedded gallery without a separate database container.
+The [public GPU image](https://hub.docker.com/r/bmaged23/face-recognition-attendance)
+contains the application, pinned libraries and required face models.
+It uses a persistent embedded gallery: no Git clone, model download, external
+Qdrant server, cloud account or API key is required after pulling.
+
+```sh
+docker pull bmaged23/face-recognition-attendance:gpu
+docker run --rm --gpus all --name face-attendance \
+  -p 127.0.0.1:7323:7323 \
+  -v face-attendance-data:/app/data \
+  bmaged23/face-recognition-attendance:gpu
+```
+
+Open **http://localhost:7323/docs** for photo enrollment/recognition. The named
+volume keeps your gallery and outputs. Linux x86-64 containers and NVIDIA GPU
+support are required; tested on GTX 1660 Ti 6 GiB. The registry download is about
+**3.64 GB**, Docker reports **10.26 GB locally**; allow **20 GiB** disk headroom.
+[Docker guide: inputs, videos, updates and persistence](docs/deployment/DOCKER.md) ·
+[API guide](docs/api/README.md) · [CI/CD guide](docs/deployment/README.md).
+
+### Verified exact-container release
+
+| Gate / measurement | Result |
+| --- | --- |
+| Shipped offline tests | **81/81 passed** |
+| Frozen GPU recognition | **228/228 executed; all baseline outcomes preserved** |
+| Recognition quality | **113/152** known probes correct including detector misses; **0/56** detected unknown probes falsely accepted |
+| Real HTTP workflows | Enrollment, known/unknown recognition, attendance, annotations, JSON/video downloads and byte ranges passed |
+| Persistence | Same enrolled person recognized after container restart |
+| Median / p95 probe latency | **113.53 / 161.41 ms** |
+| Sampled container RAM | Mean **941.53 MiB**, peak **1,245.18 MiB** |
+| Sampled container CPU | Mean **143.22%**, peak **197.90%**; 100% is one logical core |
+| Whole-device GPU | Observed peak **843 MiB VRAM**, **42% utilization** |
+| Public distribution | Anonymous pull, host HTTP access, real GPU API and restart passed |
+
+These are small development suites on one setup. Probe timing excludes startup,
+enrollment and video encoding. Container resource sampling covers qualification
+processes; GPU figures include other desktop activity. Sampling can miss peaks.
+[Exact evidence and per-probe results](docs/evaluation/README.md#verified-container-release) ·
+[Passing complete release](https://github.com/bmaged23/face-recognition-attendance/actions/runs/40420363659).
+
+Qualified application source: `ffb72c3e05c38797bffa52f05690b42503228741`. Immutable image:
+
+```text
+bmaged23/face-recognition-attendance@sha256:9a2fcd1a0de9c082d58dcc787814896fe75cec297a7d74a04f9c5d7f1a5e289f
+```
 
 For the external-Qdrant Compose stack, install the NVIDIA Container Toolkit or use
 Docker Desktop with supported GPU/WSL integration, then run:
@@ -439,7 +487,7 @@ trigger full qualification; documentation-only changes avoid model rebuilds.
 | Check | Measured native result |
 | --- | --- |
 | Offline behavior/library suite | **81 passing tests** (behavior, media, actual Qdrant/HTTP libraries, gate failures) |
-| Frozen labeled probes | 228 executions; 19 enrolled identities; 10 unseen identities |
+| Frozen labeled probes | 228 executions; 19 enrolled identities; 10 identities held out of the gallery |
 | Known probes including detector misses | **113/152 correct (74.34%)** |
 | Known probes conditional on detection | **113/113 correct**; zero wrong identities accepted |
 | Unknown-person rejection | **0/56 detected unknown probes falsely accepted**; 20 additional unknown probes missed by detection |
@@ -452,7 +500,7 @@ initialization, enrollment, HTTP transport and video encoding. The camera views
 share one recording and probes are correlated; these are exposed development
 cases, not population accuracy. The main weakness is face detection. No
 liveness/anti-spoofing or fairness certification is established. Container
-qualification is recorded separately from native scores.
+qualification is recorded above, separately from native scores.
 
 [Full protocol, per-sample results, rejected alternatives and limitations](docs/evaluation/README.md) ·
 [Historical validation](docs/VALIDATION.md).

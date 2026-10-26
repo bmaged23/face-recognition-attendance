@@ -67,3 +67,23 @@ footage are excluded from the runtime image. AdaFace/MTCNN notices remain under
 noncommercial terms and is acquired separately. This is a local prototype without
 liveness detection or a biometric security/fairness certification. Similarity is
 not a calibrated probability.
+
+## Verified exact-image release
+
+[Successful complete release](https://github.com/bmaged23/face-recognition-attendance/actions/runs/40420363659):
+81 shipped tests, 228 GPU probes with unchanged outcomes, full real HTTP/artifact
+workflow, persistent recognition after restart and anonymous public pull/startup
+all passed. Container median/p95 probe processing was 113.53/161.41 ms. Sampled
+container memory mean/peak was 941.53/1,245.18 MiB; CPU mean/peak 143.22/197.90%
+(100% is one logical core). Whole-device observed peak VRAM was 843 MiB and GPU
+utilization 42%; desktop activity is included and sampling can miss peaks.
+
+Registry compressed size is approximately 3.64 GB; Docker reports 10.26 GB locally.
+Allow 20 GiB disk headroom. This is an NVIDIA GPU image, not a certified CPU route.
+Immutable image:
+
+```text
+bmaged23/face-recognition-attendance@sha256:9a2fcd1a0de9c082d58dcc787814896fe75cec297a7d74a04f9c5d7f1a5e289f
+```
+
+[Measured release evidence and limitations](https://github.com/bmaged23/face-recognition-attendance/blob/main/docs/evaluation/README.md#verified-container-release).

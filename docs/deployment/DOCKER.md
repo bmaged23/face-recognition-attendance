@@ -1,7 +1,8 @@
 # Docker GPU application
 
-Release qualification is in progress; consult the main README's release evidence
-before treating the public tag as verified. The maintained image recipe is
+The public GPU image passed exact-image evaluation and anonymous pull/startup.
+[Verified measurements and digest](../evaluation/README.md#verified-container-release).
+The maintained image recipe is
 `deployment/docker/Dockerfile`; no root Dockerfile is required.
 
 The complete GPU image includes Python, exact dependencies, the AdaFace inference
@@ -15,8 +16,8 @@ prerecorded source demo are not bundled in the runtime image.
 Requires Linux x86-64 containers and an NVIDIA GPU exposed to Docker. Native
 CUDA was tested on GTX 1660 Ti 6 GiB. Native Windows/macOS/ARM and CPU-only use of
 the public GPU image are not certified. Docker startup/evaluation evidence is
-separate from native results. Allow substantial unpacking space beyond registry
-size; the PyTorch/CUDA runtime is several GB.
+separate from native results. The registry download is approximately 3.64 GB and Docker reports 10.26 GB
+locally. Allow 20 GiB free disk headroom for downloading, unpacking and outputs.
 
 ```sh
 docker pull bmaged23/face-recognition-attendance:gpu
@@ -90,3 +91,9 @@ qualified separately from the single-container embedded-store release.
 [API guide](../api/README.md) · [CI/CD flow](README.md) ·
 [GitHub source](https://github.com/bmaged23/face-recognition-attendance) ·
 [Docker Hub](https://hub.docker.com/r/bmaged23/face-recognition-attendance).
+
+For the immutable qualified release:
+
+```sh
+docker pull bmaged23/face-recognition-attendance@sha256:9a2fcd1a0de9c082d58dcc787814896fe75cec297a7d74a04f9c5d7f1a5e289f
+```

@@ -1,0 +1,320 @@
+{
+  "source_sha": "ffb72c3e05c38797bffa52f05690b42503228741",
+  "image": "bmaged23/face-recognition-attendance:gpu",
+  "digest": "sha256:9a2fcd1a0de9c082d58dcc787814896fe75cec297a7d74a04f9c5d7f1a5e289f",
+  "registry_compressed_bytes": 3637366907,
+  "workflow": "https://github.com/bmaged23/face-recognition-attendance/actions/runs/40420363659",
+  "workflow_result": "success",
+  "offline_tests": 81,
+  "candidate_gate": {
+    "image": "ghcr.io/bmaged23/face-recognition-candidates@sha256:9a2fcd1a0de9c082d58dcc787814896fe75cec297a7d74a04f9c5d7f1a5e289f",
+    "source_sha": "ffb72c3e05c38797bffa52f05690b42503228741",
+    "status": "passed",
+    "recognition": {
+      "probes": 228,
+      "known_probes": 152,
+      "unknown_probes": 76,
+      "detected_known": 113,
+      "detected_unknown": 56,
+      "correct_known_accepted": 113,
+      "wrong_known_accepted": 0,
+      "known_rejected_after_detection": 0,
+      "unknown_false_accepts": 0,
+      "known_end_to_end_correct_rate": 0.743421052631579,
+      "known_correct_rate_given_detection": 1.0,
+      "unknown_false_accept_rate_given_detection": 0.0,
+      "latency_seconds": {
+        "median": 0.11352922000003218,
+        "p95": 0.16141449035012556,
+        "total": 27.399001922001617
+      },
+      "component_median_seconds": {
+        "detection_seconds": 0.09248644400008743,
+        "embedding_seconds": 0.021727133000013055,
+        "search_seconds": 0.0008456265001086649
+      }
+    },
+    "resources": {
+      "sample_count": 80,
+      "interval_seconds": 0.5,
+      "cpu_definition": "100 percent is one logical core; sampled process RSS, whole-device GPU",
+      "rss_mib": {
+        "mean": 964.84658203125,
+        "peak": 1045.796875
+      },
+      "cpu_percent": {
+        "mean": 158.37025225659127,
+        "peak": 201.9844971721953
+      },
+      "whole_device_vram_mib": {
+        "mean": 828.55,
+        "peak": 843.0
+      },
+      "whole_device_gpu_percent": {
+        "mean": 22.3625,
+        "peak": 42.0
+      }
+    },
+    "published_host_http": "passed",
+    "http_checks": [
+      "liveness",
+      "real model readiness",
+      "two photo enrollments",
+      "known recognition",
+      "unseen identity rejection",
+      "checkin job",
+      "checkout job",
+      "four-frame annotations",
+      "persistent attendance schema",
+      "result downloads",
+      "video byte ranges"
+    ],
+    "http_events": [
+      {
+        "endpoint": "/health",
+        "status": 200,
+        "seconds": 0.008197898999924291
+      },
+      {
+        "endpoint": "/ready",
+        "status": 200,
+        "seconds": 0.0013672669999778009
+      },
+      {
+        "endpoint": "/enroll",
+        "status": 200,
+        "seconds": 1.2528435379999792
+      },
+      {
+        "endpoint": "/enroll",
+        "status": 200,
+        "seconds": 0.7168255659998977
+      },
+      {
+        "endpoint": "/recognize/image",
+        "status": 200,
+        "seconds": 0.21426812199979395
+      },
+      {
+        "endpoint": "/recognize/image",
+        "status": 200,
+        "seconds": 0.1702178800001093
+      },
+      {
+        "endpoint": "/video-recognition",
+        "status": 202,
+        "seconds": 0.003079950000028475
+      },
+      {
+        "endpoint": "/jobs/91bd297e-2cbc-4e90-98a7-0510b9514ca8",
+        "status": 200,
+        "seconds": 0.002072701000088273
+      },
+      {
+        "endpoint": "/jobs/91bd297e-2cbc-4e90-98a7-0510b9514ca8",
+        "status": 200,
+        "seconds": 0.0014194689999840193
+      },
+      {
+        "endpoint": "/jobs/91bd297e-2cbc-4e90-98a7-0510b9514ca8",
+        "status": 200,
+        "seconds": 0.002096373000085805
+      },
+      {
+        "endpoint": "/jobs/91bd297e-2cbc-4e90-98a7-0510b9514ca8",
+        "status": 200,
+        "seconds": 0.0015010530000836297
+      },
+      {
+        "endpoint": "/jobs/91bd297e-2cbc-4e90-98a7-0510b9514ca8",
+        "status": 200,
+        "seconds": 0.0021786760000850336
+      },
+      {
+        "endpoint": "/jobs/91bd297e-2cbc-4e90-98a7-0510b9514ca8/artifacts/results",
+        "status": 200,
+        "seconds": 0.004500456999949165
+      },
+      {
+        "endpoint": "/video-recognition",
+        "status": 202,
+        "seconds": 0.002737395999929504
+      },
+      {
+        "endpoint": "/jobs/8eae81b5-ef11-4a19-86f9-867da6330a0e",
+        "status": 200,
+        "seconds": 0.0014658509999208036
+      },
+      {
+        "endpoint": "/jobs/8eae81b5-ef11-4a19-86f9-867da6330a0e",
+        "status": 200,
+        "seconds": 0.0015506549998463015
+      },
+      {
+        "endpoint": "/jobs/8eae81b5-ef11-4a19-86f9-867da6330a0e",
+        "status": 200,
+        "seconds": 0.002056871999911891
+      },
+      {
+        "endpoint": "/jobs/8eae81b5-ef11-4a19-86f9-867da6330a0e",
+        "status": 200,
+        "seconds": 0.0016493580001224473
+      },
+      {
+        "endpoint": "/jobs/8eae81b5-ef11-4a19-86f9-867da6330a0e",
+        "status": 200,
+        "seconds": 0.002117473999987851
+      },
+      {
+        "endpoint": "/jobs/8eae81b5-ef11-4a19-86f9-867da6330a0e/artifacts/results",
+        "status": 200,
+        "seconds": 0.002423184000008405
+      }
+    ],
+    "persistent_gallery_restart": "passed"
+  },
+  "container_sampling": {
+    "samples": 27,
+    "metrics": {
+      "cpu_percent_one_core": {
+        "mean": 143.22444444444443,
+        "peak": 197.9
+      },
+      "memory_mib": {
+        "mean": 941.5251851851853,
+        "peak": 1245.184
+      },
+      "pids": {
+        "mean": 15.148148148148149,
+        "peak": 19
+      },
+      "gpu_vram_mib": {
+        "mean": 576.5925925925926,
+        "peak": 843.0
+      },
+      "gpu_util_percent": {
+        "mean": 15.555555555555555,
+        "peak": 42.0
+      }
+    },
+    "scope": "Docker cgroup CPU/memory including API, vision workers and FFmpeg; CPU100%=one logical core. GPU is whole-device usage. No cloud inference is used. Coarse sampling can miss peaks."
+  },
+  "public_image_gate": {
+    "image": "bmaged23/face-recognition-attendance:gpu",
+    "source_sha": "ffb72c3e05c38797bffa52f05690b42503228741",
+    "status": "passed",
+    "published_host_http": "passed",
+    "http_checks": [
+      "liveness",
+      "real model readiness",
+      "two photo enrollments",
+      "known recognition",
+      "unseen identity rejection",
+      "checkin job",
+      "checkout job",
+      "four-frame annotations",
+      "persistent attendance schema",
+      "result downloads",
+      "video byte ranges"
+    ],
+    "http_events": [
+      {
+        "endpoint": "/health",
+        "status": 200,
+        "seconds": 0.008500928000103158
+      },
+      {
+        "endpoint": "/ready",
+        "status": 200,
+        "seconds": 6.086846971999876
+      },
+      {
+        "endpoint": "/enroll",
+        "status": 200,
+        "seconds": 1.4848129530000733
+      },
+      {
+        "endpoint": "/enroll",
+        "status": 200,
+        "seconds": 0.652156788999946
+      },
+      {
+        "endpoint": "/recognize/image",
+        "status": 200,
+        "seconds": 0.1740777119998711
+      },
+      {
+        "endpoint": "/recognize/image",
+        "status": 200,
+        "seconds": 0.13589095799989082
+      },
+      {
+        "endpoint": "/video-recognition",
+        "status": 202,
+        "seconds": 0.0032332650000626018
+      },
+      {
+        "endpoint": "/jobs/d374f35b-0ea8-40ed-98ec-5d8862aa4b75",
+        "status": 200,
+        "seconds": 0.001992601999972976
+      },
+      {
+        "endpoint": "/jobs/d374f35b-0ea8-40ed-98ec-5d8862aa4b75",
+        "status": 200,
+        "seconds": 0.002851747000022442
+      },
+      {
+        "endpoint": "/jobs/d374f35b-0ea8-40ed-98ec-5d8862aa4b75",
+        "status": 200,
+        "seconds": 0.00204070499989939
+      },
+      {
+        "endpoint": "/jobs/d374f35b-0ea8-40ed-98ec-5d8862aa4b75",
+        "status": 200,
+        "seconds": 0.001530978000118921
+      },
+      {
+        "endpoint": "/jobs/d374f35b-0ea8-40ed-98ec-5d8862aa4b75",
+        "status": 200,
+        "seconds": 0.0017786910000268108
+      },
+      {
+        "endpoint": "/jobs/d374f35b-0ea8-40ed-98ec-5d8862aa4b75/artifacts/results",
+        "status": 200,
+        "seconds": 0.004376824000019042
+      },
+      {
+        "endpoint": "/video-recognition",
+        "status": 202,
+        "seconds": 0.002288016999955289
+      },
+      {
+        "endpoint": "/jobs/8a29bf71-a66c-4fab-a729-fb608a6e6b2e",
+        "status": 200,
+        "seconds": 0.0014154730001791904
+      },
+      {
+        "endpoint": "/jobs/8a29bf71-a66c-4fab-a729-fb608a6e6b2e",
+        "status": 200,
+        "seconds": 0.003463277000037124
+      },
+      {
+        "endpoint": "/jobs/8a29bf71-a66c-4fab-a729-fb608a6e6b2e",
+        "status": 200,
+        "seconds": 0.0019155990000854217
+      },
+      {
+        "endpoint": "/jobs/8a29bf71-a66c-4fab-a729-fb608a6e6b2e",
+        "status": 200,
+        "seconds": 0.0021781109999210457
+      },
+      {
+        "endpoint": "/jobs/8a29bf71-a66c-4fab-a729-fb608a6e6b2e/artifacts/results",
+        "status": 200,
+        "seconds": 0.0023434199999883276
+      }
+    ],
+    "persistent_gallery_restart": "passed"
+  },
+  "limitations": "Development regression set; camera views share a recording. No temporal accuracy, anti-spoofing or population fairness certification. Coarse resource sampling may miss peaks."
+}

@@ -74,6 +74,38 @@ to 0.8 retained 70/76 known successes and detected one additional unknown probe,
 but did not improve known-person coverage and was slower in that run. Defaults
 remain factor 0.85 and final threshold 0.9. Both reports are retained below.
 
+## Verified container release
+
+[Complete successful workflow](https://github.com/bmaged23/face-recognition-attendance/actions/runs/40420363659) qualified application source `ffb72c3e05c38797bffa52f05690b42503228741` and
+public image `bmaged23/face-recognition-attendance@sha256:9a2fcd1a0de9c082d58dcc787814896fe75cec297a7d74a04f9c5d7f1a5e289f`. All five release
+stages succeeded, including an anonymous pull and real public-image startup.
+
+The exact candidate passed **81 shipped tests**, **228/228 probe executions**,
+all frozen detection/identity outcomes, the complete real HTTP smoke and
+persistent recognition after stop/start. The public image repeated HTTP/GPU,
+artifact and persistence checks. Known success stayed 113/152 overall and
+113/113 conditional on detection; unknown false accepts stayed 0/56 detected.
+
+Median/p95 probe time was **113.53/161.41 ms**. Twenty-seven Docker cgroup samples
+recorded mean/peak RAM **941.53/1,245.18 MiB**, CPU **143.22/197.90%** (100% is one
+logical core), whole-device peak VRAM **843 MiB**, and peak GPU utilization **42%**.
+GPU measurements include desktop activity. The evaluator's process-RSS samples
+and Docker's container measurements have different scopes; do not combine them.
+Container health checks can overlap the evaluator. These are sampled
+qualification observations, not guaranteed production peaks or throughput.
+
+The registry reports **3,637,366,907 compressed bytes**; Docker's local display is
+about **10.26 GB**. Recommend 20 GiB disk headroom. See
+[release evidence](measurements/container-release.json) and
+[all container probe outcomes](measurements/container-recognition.json).
+
+The first attempt failed during image download; a later attempt exposed a
+stop/remove/re-create test-driver race after the recognition/API checks passed.
+The driver now stops/starts the same container and cleans up explicitly. Those
+failed runs remain recorded; only the final linked run is the successful release.
+A superseded intermediate build was intentionally cancelled after a Hub-metadata
+fix. No quality thresholds were weakened to publish.
+
 ## Reproduce
 
 Obtain `Still.tar.xz`, `P2E_S2.tar.xz`, and `groundtruth.tar.xz` from the official
@@ -108,8 +140,8 @@ an unseen person, check-in/check-out video jobs, JSON/seekable-video downloads
 and four-frame annotations. Repeated-frame clips are synthetic workflow tests,
 not tracking accuracy ground truth. Offline tests use controlled inference but
 real Qdrant, media and HTTP libraries. Camera/RTSP capture and behavioral fairness
-are not established by these tests. Container qualification is recorded separately
-when its exact-image gate completes; native measurements are not container scores.
+are not established by these tests. Container qualification is recorded above; native measurements are not container
+scores.
 
 ChokePoint is for noncommercial research/personal experimentation. Retain its
 [source license](../licenses/SOURCE_AND_LICENSE.html),

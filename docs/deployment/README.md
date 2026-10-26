@@ -49,3 +49,9 @@ users' running applications: CD delivers the image; users pull and run it.
 [Checks workflow](../../.github/workflows/checks.yml) ·
 [GPU release workflow](../../.github/workflows/release.yml) ·
 [Docker instructions](DOCKER.md) · [Evaluation](../evaluation/README.md).
+
+## Verified release
+
+[Full successful run](https://github.com/bmaged23/face-recognition-attendance/actions/runs/40420363659) passed every stage for source `ffb72c3e05c38797bffa52f05690b42503228741`.
+Public immutable image: `bmaged23/face-recognition-attendance@sha256:9a2fcd1a0de9c082d58dcc787814896fe75cec297a7d74a04f9c5d7f1a5e289f`.
+[Exact metrics, gates and limitations](../evaluation/README.md#verified-container-release).
