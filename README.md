@@ -454,13 +454,25 @@ scripts/
   download_model.py             Checkpoint download and checksum verification
   serve_demo.py                 Local looping playlist
   build_pipeline_diagram.py     SVG and animated GIF generator
-  datasets/                     Optional dataset preparation/evaluation utilities
+  setup/                        Compact inference-checkpoint export
+  evaluation/                   Frozen cases, model evaluation and resource measurement
+  validation/                   Real HTTP/model workflow checks
+  release/                      Quality gates, exact-image qualification and Hub updates
+  documentation/                Summaries generated from measured reports
+  datasets/                     Optional historical research/demo utilities
+  README.md                     Purpose of every supporting tool
 tests/                          Regression, API, media, matching, attendance tests
 vendor/adaface/                 Pinned inference source, MTCNN weights, licenses
 docs/                           Architecture, validation, evaluation, media, notices
-requirements.txt                Exact .venv package versions
+requirements.txt                Exact GPU .venv package versions
+requirements/cpu.txt            Exact hosted CPU-test environment
+requirements-dev.txt            Convenience include of the main snapshot
+requirements-insightface.txt    Optional experimental adapter; outside qualified image
+.gitignore                      Private/local/generated files excluded from Git
+.dockerignore                   Files excluded from the container build context
 .env.example                    Shareable configuration template
 deployment/docker/              Maintained complete GPU image recipe
+deployment/dockerhub/           Maintained public image overview
 docker-compose.yml              Optional external-Qdrant deployment
 evaluation/                     Frozen annotated cases and regression gate
 .github/workflows/              Hosted tests and gated GPU image delivery
@@ -471,6 +483,9 @@ Local-only folders are ignored: `.venv/`, `.python/`, `.cache/`, `input/`,
 working notes). The active application is independent of the archive. Private
 photos, checkpoints, and generated outputs are not committed. Documentation
 images and vendored small MTCNN `.npy` weights remain eligible for Git.
+[Tool-by-tool descriptions](scripts/README.md) · [Documentation index](docs/README.md).
+Historical experiments and upstream notices are retained for provenance and
+reproduction; they are distinguished from the current supported release.
 
 ## CI/CD — tests before publication
 
